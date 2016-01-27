@@ -1895,7 +1895,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpNLD_BREEZER_R2";
 					init="GrpNLD_BREEZER = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER Grenadier";
+					description="NLD BREEZER Rifleman";
 				};
 				class Item7
 				{
@@ -2091,7 +2091,7 @@ class Mission
 					skill=0.60000002;
 					text="GrpNLD_GIN_R2";
 					init="GrpNLD_GIN = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Gin Grenadier";
+					description="NLD Gin Rifleman";
 				};
 				class Item7
 				{
