@@ -226,3 +226,6 @@ murshun_easywayout_canSuicide = true;
 
 // Because we want to start with the weapon lowered
 player switchMove "AmovPercMstpSrasWrflDnon_AmovPercMstpSlowWrflDnon";
+
+// Start with Earbuds in
+player setVariable ["ACE_hasEarPlugsIn", true, true];
