@@ -44,7 +44,7 @@ switch (_unitfaction) do
 	{
 		["GrpNLD_CO", 0, "Whisky", "ColorWhite"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_BREEZER", 0, "Breezer", "ColorBlue"] spawn f_fnc_localGroupMarker;
-		["GrpNLD_GIN", 0, "Gin", "ColorGreen"] spawn f_fnc_localGroupMarker;
+		["GrpNLD_GIN", 0, "Gin", "ColorYellow"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_RUM", 0, "Rum", "ColorRed"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_AH1", 9, "AH1", "ColorRed"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_TH1", 9, "TH1", "ColorRed"] spawn f_fnc_localGroupMarker;
