@@ -14,17 +14,21 @@ _typeOfUnit = _unit getVariable ["f_var_assignGear", "NIL"];
 
 switch ((side player)) do { //longrange, shortrange, rifradio
     case (west): {
-      _radio1 = TF_defaultWestBackpack;
+
+      // Desert backpack radio
+      // _radio1 = "lt_tfr_dst";
+      // Woodland backpack radio
+      _radio1 = "lt_tfr_wdl";
       _radio2 = TF_defaultWestPersonalRadio;
-      _radio3 = TF_defaultWestRiflemanRadio;};
+      _radio3 = TF_defaultWestPersonalRadio;};
     case (east): {
       _radio1 = TF_defaultEastBackpack;
       _radio2 = TF_defaultEastPersonalRadio;
-      _radio3 = TF_defaultEastRiflemanRadio;};
+      _radio3 = TF_defaultEastPersonalRadio;};
     default {
       _radio1 = TF_defaultGuerBackpack;
       _radio2 = TF_defaultGuerPersonalRadio;
-      _radio3 = TF_defaultGuerRiflemanRadio;};
+      _radio3 = TF_defaultGuerPersonalRadio;};
 };
 
 // ====================================================================================
