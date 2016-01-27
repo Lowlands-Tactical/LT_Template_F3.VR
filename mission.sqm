@@ -82,7 +82,7 @@ class Mission
 	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="[LT-OP] F3 Template (2016-01-24)";
+		briefingName="[LT-OP] F3 Template (2016-01-27)";
 		overviewText="*** Insert mission description here. ***";
 		resistanceWest=0;
 		startWeather=0.84999996;
@@ -2540,7 +2540,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNLD_MMG1_AG";
-					init="GrpNLD_MMG1 = group this; [""mmgag"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_MMG1 = group this; [""mmgag"",this,""nld_units""] call f_fnc_assignGear; ";
 				};
 				class Item1
 				{
@@ -2552,7 +2552,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNLD_MMG1_G";
-					init="GrpNLD_MMG1 = group this; [""mmgg"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_MMG1 = group this; [""mmgg"",this,""nld_units""] call f_fnc_assignGear; ";
 				};
 			};
 		};
@@ -2574,7 +2574,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNLD_HMG1_AG";
-					init="GrpNLD_HMG1 = group this; [""hmgag"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_HMG1 = group this; [""hmgag"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD HMG1 Assistant";
 				};
 				class Item1
@@ -2587,7 +2587,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNLD_HMG1_G";
-					init="GrpNLD_HMG1 = group this; [""hmgg"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_HMG1 = group this; [""hmgg"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD HMG1 Gunner";
 				};
 			};
@@ -2610,7 +2610,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNLD_MAT1_AG";
-					init="GrpNLD_MAT1 = group this; [""matag"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_MAT1 = group this; [""matag"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Medium AT Team 1 Spotter (Leader)";
 				};
 				class Item1
@@ -2623,7 +2623,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNLD_MAT1_G";
-					init="GrpNLD_MAT1 = group this; [""matg"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_MAT1 = group this; [""matg"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Medium AT Team 1 Gunner";
 				};
 			};
@@ -2646,7 +2646,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNLD_HAT1_AG";
-					init="GrpNLD_HAT1 = group this; [""hatag"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_HAT1 = group this; [""hatag"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Heavy AT Team 1 Spotter (Leader)";
 				};
 				class Item1
@@ -2659,7 +2659,7 @@ class Mission
 					player="PLAY CDG";
 					skill=0.60000002;
 					text="UnitNLD_HAT1_G";
-					init="GrpNLD_HAT1 = group this; [""hatg"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_HAT1 = group this; [""hatg"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Heavy AT Team 1 Gunner";
 				};
 			};
@@ -2681,7 +2681,7 @@ class Mission
 					rank="CORPORAL";
 					skill=0.60000002;
 					text="UnitNLD_ST1_SP";
-					init="GrpNLD_ST1 = group this; [""sp"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_ST1 = group this; [""sp"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Sniper Team 1 Spotter (Leader)";
 				};
 				class Item1
@@ -2694,7 +2694,7 @@ class Mission
 					skill=0.60000002;
 					health=0.99000001;
 					text="UnitNLD_ST1_SN";
-					init="GrpNLD_ST1 = group this; [""sn"",this] call f_fnc_assignGear; ";
+					init="GrpNLD_ST1 = group this; [""sn"",this,""nld_units""] call f_fnc_assignGear; ";
 					description="NLD Sniper Team 1 Sniper";
 				};
 			};
@@ -2731,7 +2731,7 @@ class Mission
 			vehicle="NLD_WLD_Fennek";
 			skill=0.60000002;
 			text="VehNLD_CAR1";
-			init="[""v_car"",this] call f_fnc_assignGear";
+			init="[""v_car"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item3
 		{
@@ -2740,7 +2740,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item4
 		{
@@ -2750,7 +2750,7 @@ class Mission
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
 			text="VehNLD_TR1";
-			init="[""v_tr"",this] call f_fnc_assignGear";
+			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item5
 		{
@@ -2760,7 +2760,7 @@ class Mission
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
 			text="VehNLD_TR2";
-			init="[""v_tr"",this] call f_fnc_assignGear";
+			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item6
 		{
@@ -2770,73 +2770,73 @@ class Mission
 			vehicle="B_Truck_01_transport_F";
 			skill=0.60000002;
 			text="VehNLD_TR3";
-			init="[""v_tr"",this] call f_fnc_assignGear";
+			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item7
 		{
-			position[]={55.476395,5,98.27832};
+			position[]={35.869034,5,36.010254};
+			special="NONE";
 			id=97;
 			side="EMPTY";
-			vehicle="B_supplyCrate_F";
+			vehicle="NLD_WLD_Leo2";
+			leader=1;
 			skill=0.60000002;
-			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+			text="VehNLD_TNK1";
+			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item8
 		{
-			position[]={75.583496,5,98.246582};
+			position[]={46.065426,5,35.753418};
+			special="NONE";
 			id=98;
 			side="EMPTY";
-			vehicle="B_supplyCrate_F";
+			vehicle="NLD_WLD_Leo2";
+			leader=1;
 			skill=0.60000002;
-			init="[""crate_med"",this,""blu_f""] call f_fnc_assignGear";
+			text="VehNLD_TNK2";
+			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item9
 		{
-			position[]={35.869034,5,36.010254};
+			position[]={56.004337,5,35.547363};
 			special="NONE";
 			id=99;
 			side="EMPTY";
 			vehicle="NLD_WLD_Leo2";
 			leader=1;
 			skill=0.60000002;
-			text="VehNLD_TNK1";
-			init="[""v_ifv"",this] call f_fnc_assignGear";
+			text="VehNLD_TNK3";
+			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item10
 		{
-			position[]={46.065426,5,35.753418};
+			position[]={65.582764,5,35.444336};
 			special="NONE";
 			id=100;
 			side="EMPTY";
 			vehicle="NLD_WLD_Leo2";
 			leader=1;
 			skill=0.60000002;
-			text="VehNLD_TNK2";
-			init="[""v_ifv"",this] call f_fnc_assignGear";
+			text="VehNLD_TNK4";
+			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item11
 		{
-			position[]={56.004337,5,35.547363};
-			special="NONE";
+			position[]={55.608673,5,98.255371};
 			id=101;
 			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			text="VehNLD_TNK3";
-			init="[""v_ifv"",this] call f_fnc_assignGear";
+			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
 		};
 		class Item12
 		{
-			position[]={65.582764,5,35.444336};
-			special="NONE";
+			position[]={75.579575,5,98.255371};
 			id=102;
 			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
+			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
-			text="VehNLD_TNK4";
-			init="[""v_ifv"",this] call f_fnc_assignGear";
+			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
 		};
 	};
 	class Markers
