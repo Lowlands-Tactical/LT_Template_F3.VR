@@ -13,6 +13,9 @@ tf_same_sw_frequencies_for_side = true;
 // Should a side use the same long-wave frequencies
 tf_same_lr_frequencies_for_side = true;
 
+// Extend the range of radios
+TF_terrain_interception_coefficient = 0;
+
 // Whether any radios should be assigned at all, to any units
 // TRUE = Disable radios for all units
 f_radios_settings_tfr_disableRadios = FALSE;
