@@ -323,12 +323,19 @@ if (_isMan) then {
 
 	// Comment this to remove the NVG
 	_unit linkItem _nvg;			// Add and equip the faction's nvg
-	_unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	// _unit addItem _firstaid;		// Add a single first aid kit (FAK)
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_fieldDressing";
+	_unit addItem "ACE_morphine";
+	_unit addItem "ACE_morphine";
 	_unit linkItem "ItemMap";		// Add and equip the map
 	_unit linkItem "ItemCompass";	// Add and equip a compass
 	_unit linkItem "ItemRadio";		// Add and equip A3's default radio
 	_unit linkItem "ItemWatch";		// Add and equip a watch
-	//_unit linkItem "ItemGPS"; 	// Add and equip a GPS
 	_unit addItem "ACE_MapTools";			// Add MapTools
 	_unit addItem "ACE_Flashlight_XL50";	// Add Flashlight XL50
 
