@@ -483,7 +483,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,3];
 		_unit addweapon _pistol;
 		["dm"] call _backpack;
-		_attachments = [_attach1,_scope2];
+		_attachments = [_attach1,_scope3];
 	};
 
 // LOADOUT: MEDIUM MG GUNNER
