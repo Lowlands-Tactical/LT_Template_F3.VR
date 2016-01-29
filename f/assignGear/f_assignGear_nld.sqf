@@ -65,7 +65,7 @@ _attach2 = "acc_flashlight";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "CUP_optic_HoloBlack";	// Holosight
+_scope1 = "optic_MRCO";	// Holosight
 _scope2 = "optic_Hamr";				// De optic ding
 _scope3 = "optic_SOS";				// SOS Scope - 18x - 75x
 
