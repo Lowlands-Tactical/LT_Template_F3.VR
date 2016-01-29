@@ -1754,8 +1754,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="F3_preMount_NLD_BREEZER";
-					init="[synchronizedObjects this,[""GrpNLD_BREEZER""],true,false] call f_fnc_mountGroups;";
+					text="F3_preMount_NLD_BRANDY";
+					init="[synchronizedObjects this,[""GrpNLD_BRANDY""],true,false] call f_fnc_mountGroups;";
 				};
 			};
 		};
@@ -1814,9 +1814,9 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_SL";
-					init="GrpNLD_BREEZER = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER Squad Leader";
+					text="GrpNLD_BRANDY_SL";
+					init="GrpNLD_BRANDY = group this; [""co"",this] call f_fnc_assignGear;";
+					description="NLD Brandy Squad Leader";
 				};
 				class Item1
 				{
@@ -1828,9 +1828,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_M";
-					init="GrpNLD_BREEZER = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER Medic";
+					text="GrpNLD_BRANDY_M";
+					init="GrpNLD_BRANDY = group this; [""m"",this] call f_fnc_assignGear;";
+					description="NLD Brandy Medic";
 				};
 				class Item2
 				{
@@ -1842,9 +1842,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_FTL1";
-					init="GrpNLD_BREEZER = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER FTL";
+					text="GrpNLD_BRANDY_FTL1";
+					init="GrpNLD_BRANDY = group this; [""ftl"",this] call f_fnc_assignGear;";
+					description="NLD Brandy FTL";
 				};
 				class Item3
 				{
@@ -1855,9 +1855,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_AR1";
-					init="GrpNLD_BREEZER = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER AR";
+					text="GrpNLD_BRANDY_AR1";
+					init="GrpNLD_BRANDY = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Brandy AR";
 				};
 				class Item4
 				{
@@ -1868,9 +1868,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_AR2";
-					init="GrpNLD_BREEZER = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER AR";
+					text="GrpNLD_BRANDY_AR2";
+					init="GrpNLD_BRANDY = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Brandy AR";
 				};
 				class Item5
 				{
@@ -1881,9 +1881,9 @@ class Mission
 					vehicle="NLD_WLD_LAT";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_LAT1";
-					init="GrpNLD_BREEZER = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER LAT";
+					text="GrpNLD_BRANDY_LAT1";
+					init="GrpNLD_BRANDY = group this; [""rat"",this] call f_fnc_assignGear;";
+					description="NLD Brandy LAT";
 				};
 				class Item6
 				{
@@ -1893,9 +1893,9 @@ class Mission
 					vehicle="NLD_WLD_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_R2";
-					init="GrpNLD_BREEZER = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER Rifleman";
+					text="GrpNLD_BRANDY_R2";
+					init="GrpNLD_BRANDY = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Brandy Rifleman";
 				};
 				class Item7
 				{
@@ -1905,9 +1905,9 @@ class Mission
 					vehicle="NLD_WLD_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BREEZER_R";
-					init="GrpNLD_BREEZER = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD BREEZER Rifleman";
+					text="GrpNLD_BRANDY_R";
+					init="GrpNLD_BRANDY = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Brandy Rifleman";
 				};
 			};
 		};
