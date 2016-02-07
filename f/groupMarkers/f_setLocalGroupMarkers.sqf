@@ -42,10 +42,10 @@ switch (_unitfaction) do
 
 	case "nld_units":
 	{
-		["GrpNLD_CO", 0, "Wodka", "ColorWhite"] spawn f_fnc_localGroupMarker;
-		["GrpNLD_BRANDY", 0, "Brandy", "ColorBlue"] spawn f_fnc_localGroupMarker;
-		["GrpNLD_GIN", 0, "Gin", "ColorYellow"] spawn f_fnc_localGroupMarker;
-		["GrpNLD_RUM", 0, "Rum", "ColorRed"] spawn f_fnc_localGroupMarker;
+		["GrpNLD_CO", 0, "CC", "ColorWhite"] spawn f_fnc_localGroupMarker;
+		["GrpNLD_ALPHA", 0, "Alpha", "ColorBlue"] spawn f_fnc_localGroupMarker;
+		["GrpNLD_BRAVO", 0, "Bravo", "ColorYellow"] spawn f_fnc_localGroupMarker;
+		["GrpNLD_CHARLIE", 0, "Charlie", "ColorRed"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_AH1", 9, "AH1", "ColorRed"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_TH1", 9, "TH1", "ColorRed"] spawn f_fnc_localGroupMarker;
 		["GrpNLD_TNK1", 8, "TNK1", "ColorRed"] spawn f_fnc_localGroupMarker;

@@ -1044,13 +1044,13 @@ class Mission
 						{
 							value="1";
 							parentCls="ACE_moduleRepairSettings";
-							typeName="engineerSetting_Repair";
+							typeName="enBRAVOeerSetting_Repair";
 						};
 						class Item1
 						{
 							value="0";
 							parentCls="ACE_moduleRepairSettings";
-							typeName="engineerSetting_Wheel";
+							typeName="enBRAVOeerSetting_Wheel";
 						};
 						class Item2
 						{
@@ -1062,7 +1062,7 @@ class Mission
 						{
 							value="0.5";
 							parentCls="ACE_moduleRepairSettings";
-							typeName="repairDamageThreshold_Engineer";
+							typeName="repairDamageThreshold_EnBRAVOeer";
 						};
 						class Item4
 						{
@@ -1080,7 +1080,7 @@ class Mission
 						{
 							value="1";
 							parentCls="ACE_moduleRepairSettings";
-							typeName="engineerSetting_fullRepair";
+							typeName="enBRAVOeerSetting_fullRepair";
 						};
 						class Item7
 						{
@@ -1119,19 +1119,19 @@ class Mission
 						class Item0
 						{
 							value="NLD_DST_ENGI,NLD_WLD_ENGI,NLD_WTR_ENGI,NLD_JGL_ENGI,NLD_nfpt_ENGI,NLD_nfpg_ENGI";
-							parentCls="ACE_moduleAssignEngineerRoles";
+							parentCls="ACE_moduleAssignEnBRAVOeerRoles";
 							typeName="EnableList";
 						};
 						class Item1
 						{
 							value="1";
-							parentCls="ACE_moduleAssignEngineerRoles";
+							parentCls="ACE_moduleAssignEnBRAVOeerRoles";
 							typeName="role";
 						};
 					};
 					id=23;
 					side="LOGIC";
-					vehicle="ACE_moduleAssignEngineerRoles";
+					vehicle="ACE_moduleAssignEnBRAVOeerRoles";
 					leader=1;
 					lock="UNLOCKED";
 					skill=0.60000002;
@@ -1752,8 +1752,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="F3_preMount_NLD_BRANDY";
-					init="[synchronizedObjects this,[""GrpNLD_BRANDY""],true,false] call f_fnc_mountGroups;";
+					text="F3_preMount_NLD_ALPHA";
+					init="[synchronizedObjects this,[""GrpNLD_ALPHA""],true,false] call f_fnc_mountGroups;";
 				};
 			};
 		};
@@ -1771,8 +1771,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="F3_preMount_NLD_Gin";
-					init="[synchronizedObjects this,[""GrpNLD_GIN""],true,false] call f_fnc_mountGroups;";
+					text="F3_preMount_NLD_BRAVO";
+					init="[synchronizedObjects this,[""GrpNLD_BRAVO""],true,false] call f_fnc_mountGroups;";
 				};
 			};
 		};
@@ -1790,8 +1790,8 @@ class Mission
 					vehicle="Logic";
 					leader=1;
 					skill=0.60000002;
-					text="F3_preMount_NLD_Rum";
-					init="[synchronizedObjects this,[""GrpNLD_RUM""],true,false] call f_fnc_mountGroups;";
+					text="F3_preMount_NLD_CHARLIE";
+					init="[synchronizedObjects this,[""GrpNLD_CHARLIE""],true,false] call f_fnc_mountGroups;";
 				};
 			};
 		};
@@ -1812,9 +1812,9 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_SL";
-					init="GrpNLD_BRANDY = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Brandy Squad Leader";
+					text="GrpNLD_ALPHA_SL";
+					init="GrpNLD_ALPHA = group this; [""co"",this] call f_fnc_assignGear;";
+					description="NLD Alpha Squad Leader";
 				};
 				class Item1
 				{
@@ -1826,9 +1826,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_M";
-					init="GrpNLD_BRANDY = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Brandy Medic";
+					text="GrpNLD_ALPHA_M";
+					init="GrpNLD_ALPHA = group this; [""m"",this] call f_fnc_assignGear;";
+					description="NLD Alpha Medic";
 				};
 				class Item2
 				{
@@ -1840,9 +1840,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_FTL1";
-					init="GrpNLD_BRANDY = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Brandy FTL";
+					text="GrpNLD_ALPHA_FTL1";
+					init="GrpNLD_ALPHA = group this; [""ftl"",this] call f_fnc_assignGear;";
+					description="NLD Alpha FTL";
 				};
 				class Item3
 				{
@@ -1853,9 +1853,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_AR1";
-					init="GrpNLD_BRANDY = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Brandy AR";
+					text="GrpNLD_ALPHA_AR1";
+					init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Alpha AR";
 				};
 				class Item4
 				{
@@ -1866,9 +1866,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_AR2";
-					init="GrpNLD_BRANDY = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Brandy AR";
+					text="GrpNLD_ALPHA_AR2";
+					init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Alpha AR";
 				};
 				class Item5
 				{
@@ -1879,9 +1879,9 @@ class Mission
 					vehicle="NLD_WLD_LAT";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_LAT1";
-					init="GrpNLD_BRANDY = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Brandy LAT";
+					text="GrpNLD_ALPHA_LAT1";
+					init="GrpNLD_ALPHA = group this; [""rat"",this] call f_fnc_assignGear;";
+					description="NLD Alpha LAT";
 				};
 				class Item6
 				{
@@ -1891,9 +1891,9 @@ class Mission
 					vehicle="NLD_WLD_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_R2";
-					init="GrpNLD_BRANDY = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Brandy Rifleman";
+					text="GrpNLD_ALPHA_R2";
+					init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Alpha Rifleman";
 				};
 				class Item7
 				{
@@ -1903,9 +1903,9 @@ class Mission
 					vehicle="NLD_WLD_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_BRANDY_R";
-					init="GrpNLD_BRANDY = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Brandy Rifleman";
+					text="GrpNLD_ALPHA_R";
+					init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Alpha Rifleman";
 				};
 			};
 		};
@@ -2008,9 +2008,9 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="GrpNLD_GIN_SL";
-					init="GrpNLD_GIN = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Gin Squad Leader";
+					text="GrpNLD_BRAVO_SL";
+					init="GrpNLD_BRAVO = group this; [""co"",this] call f_fnc_assignGear;";
+					description="NLD Bravo Squad Leader";
 				};
 				class Item1
 				{
@@ -2022,9 +2022,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_GIN_M";
-					init="GrpNLD_GIN = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD GIN Medic";
+					text="GrpNLD_BRAVO_M";
+					init="GrpNLD_BRAVO = group this; [""m"",this] call f_fnc_assignGear;";
+					description="NLD Bravo Medic";
 				};
 				class Item2
 				{
@@ -2036,9 +2036,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_GIN_FTL1";
-					init="GrpNLD_GIN = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Gin FTL";
+					text="GrpNLD_BRAVO_FTL1";
+					init="GrpNLD_BRAVO = group this; [""ftl"",this] call f_fnc_assignGear;";
+					description="NLD Bravo FTL";
 				};
 				class Item3
 				{
@@ -2049,9 +2049,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_GIN_AR1";
-					init="GrpNLD_GIN = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Gin AR";
+					text="GrpNLD_BRAVO_AR1";
+					init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Bravo AR";
 				};
 				class Item4
 				{
@@ -2062,9 +2062,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_GIN_AR2";
-					init="GrpNLD_GIN = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Gin AR";
+					text="GrpNLD_BRAVO_AR2";
+					init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Bravo AR";
 				};
 				class Item5
 				{
@@ -2075,9 +2075,9 @@ class Mission
 					vehicle="NLD_WLD_LAT";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_GIN_LAT1";
-					init="GrpNLD_GIN = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Gin LAT";
+					text="GrpNLD_BRAVO_LAT1";
+					init="GrpNLD_BRAVO = group this; [""rat"",this] call f_fnc_assignGear;";
+					description="NLD Bravo LAT";
 				};
 				class Item6
 				{
@@ -2087,9 +2087,9 @@ class Mission
 					vehicle="NLD_WLD_GL";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_GIN_R2";
-					init="GrpNLD_GIN = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Gin Rifleman";
+					text="GrpNLD_BRAVO_R2";
+					init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Bravo Rifleman";
 				};
 				class Item7
 				{
@@ -2099,9 +2099,9 @@ class Mission
 					vehicle="NLD_WLD_rifleman";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_GIN_R";
-					init="GrpNLD_GIN = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Gin Rifleman";
+					text="GrpNLD_BRAVO_R";
+					init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
+					description="NLD Bravo Rifleman";
 				};
 			};
 		};
@@ -2122,9 +2122,9 @@ class Mission
 					leader=1;
 					rank="SERGEANT";
 					skill=0.60000002;
-					text="GrpNLD_RUM_SL";
-					init="GrpNLD_RUM = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Rum Squad Leader";
+					text="GrpNLD_CHARLIE_SL";
+					init="GrpNLD_CHARLIE = group this; [""co"",this] call f_fnc_assignGear;";
+					description="NLD Charlie Squad Leader";
 				};
 				class Item1
 				{
@@ -2136,9 +2136,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_RUM_M";
-					init="GrpNLD_RUM = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Rum Medic";
+					text="GrpNLD_CHARLIE_M";
+					init="GrpNLD_CHARLIE = group this; [""m"",this] call f_fnc_assignGear;";
+					description="NLD Charlie Medic";
 				};
 				class Item2
 				{
@@ -2150,9 +2150,9 @@ class Mission
 					player="PLAY CDG";
 					rank="CORPORAL";
 					skill=0.60000002;
-					text="GrpNLD_RUM_FTL1";
-					init="GrpNLD_RUM = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Rum FTL";
+					text="GrpNLD_CHARLIE_FTL1";
+					init="GrpNLD_CHARLIE = group this; [""ftl"",this] call f_fnc_assignGear;";
+					description="NLD Charlie FTL";
 				};
 				class Item3
 				{
@@ -2163,9 +2163,9 @@ class Mission
 					vehicle="NLD_WLD_AR";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_RUM_AR1";
-					init="GrpNLD_RUM = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Rum AR";
+					text="GrpNLD_CHARLIE_AR1";
+					init="GrpNLD_CHARLIE = group this; [""ar"",this] call f_fnc_assignGear;";
+					description="NLD Charlie AR";
 				};
 				class Item4
 				{
@@ -2176,9 +2176,9 @@ class Mission
 					vehicle="NLD_WLD_LAT";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_RUM_LAT1";
-					init="GrpNLD_RUM = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Rum LAT";
+					text="GrpNLD_CHARLIE_LAT1";
+					init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
+					description="NLD Charlie LAT";
 				};
 				class Item5
 				{
@@ -2189,9 +2189,9 @@ class Mission
 					vehicle="NLD_WLD_LAT";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_RUM_LAT2";
-					init="GrpNLD_RUM = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Rum LAT";
+					text="GrpNLD_CHARLIE_LAT2";
+					init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
+					description="NLD Charlie LAT";
 				};
 				class Item6
 				{
@@ -2202,9 +2202,9 @@ class Mission
 					vehicle="NLD_WLD_SLA";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_RUM_DM_1";
-					init="GrpNLD_RUM = group this; [""dm"",this] call f_fnc_assignGear;";
-					description="NLD Rum Designated Marksman";
+					text="GrpNLD_CHARLIE_DM_1";
+					init="GrpNLD_CHARLIE = group this; [""dm"",this] call f_fnc_assignGear;";
+					description="NLD Charlie Designated Marksman";
 				};
 				class Item7
 				{
@@ -2214,9 +2214,9 @@ class Mission
 					vehicle="NLD_WLD_EXPL";
 					player="PLAY CDG";
 					skill=0.60000002;
-					text="GrpNLD_RUM_ENG";
-					init="GrpNLD_RUM = group this; [""eng"",this] call f_fnc_assignGear;";
-					description="NLD Rum Explosives Expert";
+					text="GrpNLD_CHARLIE_ENG";
+					init="GrpNLD_CHARLIE = group this; [""eng"",this] call f_fnc_assignGear;";
+					description="NLD Charlie Explosives Expert";
 				};
 			};
 		};
