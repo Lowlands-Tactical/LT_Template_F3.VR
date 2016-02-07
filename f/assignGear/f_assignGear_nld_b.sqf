@@ -201,6 +201,7 @@ case "r":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+		(unitBackpack _unit) addMagazineCargoGlobal [_ARmag,1];
 	};
 	// LOADOUT: HEAVY
 	if (_loadout == 2) then {
@@ -211,6 +212,7 @@ case "r":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+		(unitBackpack _unit) addMagazineCargoGlobal [_ARmag,2];
 	};
 };
 
@@ -572,3 +574,6 @@ case "cc":
 	clearMagazineCargoGlobal (unitBackpack _unit);
 	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 };
+
+// Everybody needs this! :p
+// (unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
