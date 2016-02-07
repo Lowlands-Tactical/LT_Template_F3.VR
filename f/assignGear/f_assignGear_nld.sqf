@@ -66,7 +66,7 @@ _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
 _scope1 = "optic_MRCO";	// Holosight
-_scope2 = "optic_Hamr";				// De optic ding
+_scope2 = "optic_DMR";				// De optic ding
 _scope3 = "optic_SOS";				// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_01_F_snd";		// Default bipod
@@ -495,7 +495,7 @@ switch (_typeofUnit) do
 		_unit addItem "ACE_RangeCard";
 		_unit addItem "ACE_Kestrel4500";
 		["dm"] call _backpack;
-		_attachments = [_attach1,_scope3];
+		_attachments = [_attach1,_scope2];
 	};
 
 // LOADOUT: MEDIUM MG GUNNER
