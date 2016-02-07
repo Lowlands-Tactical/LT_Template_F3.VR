@@ -488,6 +488,12 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_pistolmag,3];
 		_unit addweapon _pistol;
+		_unit addWeapon "ACE_Vector";
+		_unit addItem "ACE_ATragMX";
+		_unit addItem "ACE_DAGR";
+		_unit addItem "ACE_SpottingScope";
+		_unit addItem "ACE_RangeCard";
+		_unit addItem "ACE_Kestrel4500";
 		["dm"] call _backpack;
 		_attachments = [_attach1,_scope3];
 	};
@@ -683,8 +689,12 @@ switch (_typeofUnit) do
 		_unit addmagazines [_glsmokewhite,4];
 		_unit addweapon _glrifle;					//_COrifle
 		_unit addmagazines [_smokegrenade,2];
-		_unit addWeapon "ACE_Yardage450";
-		_unit linkItem "ItemGPS";
+		_unit addWeapon "ACE_Vector";
+		_unit addItem "ACE_ATragMX";
+		_unit addItem "ACE_DAGR";
+		_unit addItem "ACE_SpottingScope";
+		_unit addItem "ACE_RangeCard";
+		_unit addItem "ACE_Kestrel4500";
 	};
 
 // LOADOUT: VEHICLE COMMANDER
