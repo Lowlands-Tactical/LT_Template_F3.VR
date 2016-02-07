@@ -383,9 +383,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "ACE_Yardage450";
-		_unit linkItem "ItemGPS";
 		_unit addItem "murshun_cigs_lighter";
 		["g"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemcTab",1];
 	};
 
 // LOADOUT: DEPUTY COMMANDER AND SQUAD LEADER
@@ -403,9 +403,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "ACE_Yardage450";
-		_unit linkItem "ItemGPS";
 		_unit addItem "murshun_cigs_lighter";
 		["g"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemcTab",1];
 	};
 
 // LOADOUT: MEDIC
@@ -415,7 +415,6 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,4];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
-		_unit linkItem "ItemGPS";
 		["m"] call _backpack;
 	};
 
@@ -432,9 +431,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addmagazines [_smokegrenadegreen,2];
 		_unit addWeapon "ACE_Yardage450";
-		_unit linkItem "ItemGPS";
 		_unit addItem "murshun_cigs_lighter";
 		["g"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemAndroid",1];
 	};
 
 
