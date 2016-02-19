@@ -1,88 +1,93 @@
-version=12;
+version=51;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=120;
+	};
+	class MarkerIDProvider
+	{
+		nextID=2;
+	};
+	class Camera
+	{
+		pos[]={168.02878,330.48254,-130.37036};
+		dir[]={0.025938416,-0.89665496,0.4420917};
+		up[]={0.052518893,0.44276875,0.89509302};
+		aside[]={0.9983381,1.6254717e-006,-0.058575716};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"NLD_Units_Air",
+	"NLD_Units_Wheeled",
+	"A3_Weapons_F_Ammoboxes",
+	"A3_Soft_F_HEMTT",
+	"NLD_Units_Tanks",
+	"NLD_Units_Infantry",
+	"cba_main",
+	"A3_Modules_F_Curator_Curator",
+	"alive_sys_profile",
+	"alive_sup_cas",
+	"alive_sup_transport",
+	"alive_sup_combatsupport",
+	"ace_respawn",
+	"ace_captives",
+	"ace_medical",
+	"ace_nametags",
+	"alive_main",
+	"ace_finger",
+	"ace_sitting",
+	"ace_map",
+	"ace_zeus",
+	"alive_sys_data",
+	"alive_sys_playeroptions",
+	"A3_Modules_F_Curator_Misc",
+	"A3_Modules_F",
+	"alive_sup_artillery",
+	"ace_advanced_ballistics",
+	"A3_Characters_F_BLUFOR",
+	"a3_characters_f"
+};
+randomSeed=5761371;
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Scenario";
+		class Attribute0
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=0;
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
 class Mission
 {
-	addOns[]=
-	{
-		"a3_characters_f_beta",
-		"A3_Characters_F_BLUFOR",
-		"A3_Air_F_Beta_Heli_Attack_01",
-		"A3_Boat_F_Boat_Transport_01",
-		"a3_map_altis",
-		"A3_Soft_F_HEMTT",
-		"a3_uav_f_characters_f_gamma",
-		"a3_characters_f",
-		"A3_Modules_F",
-		"A3_Characters_F_Bootcamp",
-		"a3_weapons_f_ammoboxes",
-		"map_vr",
-		"NLD_Units_Infantry",
-		"NLD_Units_Wheeled",
-		"cba_main",
-		"3DEN",
-		"a3_modules_f_curator_curator",
-		"alive_sys_profile",
-		"alive_sup_cas",
-		"alive_sup_transport",
-		"alive_sup_combatsupport",
-		"ace_respawn",
-		"ace_captives",
-		"ace_medical",
-		"ace_nametags",
-		"alive_main",
-		"ace_finger",
-		"ace_sitting",
-		"ace_repair",
-		"ace_cargo",
-		"ace_map",
-		"ace_zeus",
-		"alive_sys_data",
-		"alive_sys_playeroptions",
-		"A3_Modules_F_Curator_Misc",
-		"alive_sup_artillery",
-		"ace_advanced_ballistics",
-		"NLD_Units_Air",
-		"NLD_Units_Tanks"
-	};
-	addOnsAuto[]=
-	{
-		"NLD_Units_Infantry",
-		"cba_main",
-		"3DEN",
-		"a3_modules_f_curator_curator",
-		"alive_sys_profile",
-		"alive_sup_cas",
-		"alive_sup_transport",
-		"alive_sup_combatsupport",
-		"ace_respawn",
-		"ace_captives",
-		"ace_medical",
-		"ace_nametags",
-		"alive_main",
-		"ace_finger",
-		"ace_sitting",
-		"ace_repair",
-		"ace_cargo",
-		"ace_map",
-		"ace_zeus",
-		"alive_sys_data",
-		"alive_sys_playeroptions",
-		"A3_Modules_F_Curator_Misc",
-		"A3_Modules_F",
-		"alive_sup_artillery",
-		"ace_advanced_ballistics",
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"NLD_Units_Air",
-		"NLD_Units_Wheeled",
-		"A3_Weapons_F_Ammoboxes",
-		"A3_Soft_F_HEMTT",
-		"NLD_Units_Tanks",
-		"map_vr"
-	};
-	randomSeed=11823142;
 	class Intel
 	{
-		briefingName="[LT-OP] F3 Template (2016-02-07)";
+		briefingName="[LT-OP] F3 Template (2016-02-19)";
 		overviewText="*** Insert mission description here. ***";
 		resistanceWest=0;
 		startWeather=0.48999998;
@@ -100,2834 +105,4937 @@ class Mission
 		startFogDecay=0;
 		forecastFogDecay=0;
 	};
-	class Groups
+	class Entities
 	{
-		items=48;
+		items=61;
 		class Item0
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Marker";
+			position[]={55.247253,5,129.52002};
+			name="respawn_west";
+			type="flag_Netherlands";
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={7954.7949,5,10594.579};
+			name="arty_target";
+			type="Empty";
+			id=1;
+		};
+		class Item2
+		{
+			dataType="Trigger";
+			position[]={104.34911,5,118.66455};
+			class Attributes
+			{
+				sizeA=100;
+				sizeB=100;
+				interuptable=1;
+				isRectangle=1;
+			};
+			id=2;
+			type="EmptyDetector";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={56.614319,8.0377197,60.871639};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				name="VehNLD_TH1";
+			};
+			id=3;
+			type="NLD_CH47_Unarmed";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={34.955357,7.2186556,67.274033};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				name="VehNLD_AH1";
+			};
+			id=4;
+			type="NLD_AH64D";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={13.585688,6.8323441,97.62793};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_car"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_CAR1";
+			};
+			id=5;
+			type="NLD_WLD_Fennek";
+		};
+		class Item6
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={34.827591,5.8924227,98.214844};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
+			};
+			id=6;
+			type="B_supplyCrate_F";
+		};
+		class Item7
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={34.822201,7.2250004,107.4585};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TR1";
+			};
+			id=7;
+			type="B_Truck_01_transport_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={55.544693,7.2250004,107.37598};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TR2";
+			};
+			id=8;
+			type="B_Truck_01_transport_F";
+		};
+		class Item9
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={75.601402,7.2250004,107.70801};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TR3";
+			};
+			id=9;
+			type="B_Truck_01_transport_F";
+		};
+		class Item10
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={35.869034,7.5486078,36.010254};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TNK1";
+			};
+			id=10;
+			type="NLD_WLD_Leo2";
+		};
+		class Item11
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={46.065426,7.5486078,35.753418};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TNK2";
+			};
+			id=11;
+			type="NLD_WLD_Leo2";
+		};
+		class Item12
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={56.004337,7.5486078,35.547363};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TNK3";
+			};
+			id=12;
+			type="NLD_WLD_Leo2";
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={65.582764,7.5486078,35.444336};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
+				name="VehNLD_TNK4";
+			};
+			id=13;
+			type="NLD_WLD_Leo2";
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={55.608673,5.8924227,98.255371};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
+			};
+			id=14;
+			type="B_supplyCrate_F";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={75.579575,5.8924227,98.255371};
+			};
+			side="Empty";
+			class Attributes
+			{
+				skill=0.60000002;
+				init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
+			};
+			id=15;
+			type="B_supplyCrate_F";
+		};
+		class Item16
+		{
+			dataType="Group";
+			side="West";
+			class Entities
 			{
 				items=4;
 				class Item0
 				{
-					position[]={18.464788,5,97.920898};
-					special="NONE";
-					id=0;
-					side="WEST";
-					vehicle="NLD_WLD_OFF";
-					player="PLAYER COMMANDER";
-					leader=1;
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitNLD_CO";
-					init="GrpNLD_CO = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Commander";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18.464788,5.0014391,97.970901};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpNLD_CO = group this; [""co"",this] call f_fnc_assignGear;";
+						name="UnitNLD_CO";
+						description="NLD Commander";
+						isPlayer=1;
+						isPlayable=1;
+					};
+					id=17;
+					type="NLD_WLD_OFF";
 				};
 				class Item1
 				{
-					position[]={20.061682,5,97.005859};
-					special="NONE";
-					id=1;
-					side="WEST";
-					vehicle="NLD_WLD_CLS";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_CO_M";
-					init="GrpNLD_CO = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Medic";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={20.061682,5.0014391,97.055862};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_CO = group this; [""m"",this] call f_fnc_assignGear;";
+						name="UnitNLD_CO_M";
+						description="NLD Medic";
+						isPlayable=1;
+					};
+					id=18;
+					type="NLD_WLD_CLS";
 				};
 				class Item2
 				{
-					position[]={21.078444,5,97.010742};
-					special="NONE";
-					id=2;
-					side="WEST";
-					vehicle="NLD_WLD_UAV";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_CO_UAV";
-					init="GrpNLD_CO = group this; [""uav"",this] call f_fnc_assignGear;";
-					description="NLD UAV Operator";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21.078444,5.0014391,97.060745};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_CO = group this; [""uav"",this] call f_fnc_assignGear;";
+						name="UnitNLD_CO_UAV";
+						description="NLD UAV Operator";
+						isPlayable=1;
+					};
+					id=19;
+					type="NLD_WLD_UAV";
 				};
 				class Item3
 				{
-					position[]={19.064566,5,97.032227};
-					id=3;
-					side="WEST";
-					vehicle="NLD_WLD_rifleman";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_DC";
-					init="GrpNLD_CO = group this; [""dc"",this] call f_fnc_assignGear;";
-					description="NLD 2IC";
-				};
-			};
-		};
-		class Item1
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.844847,5,46.371094};
-					id=4;
-					side="LOGIC";
-					vehicle="CBA_main_require";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item2
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.8838606,5,48.881836};
-					class args
+					dataType="Object";
+					class PositionInfo
 					{
-						items=4;
-						class Item0
-						{
-							value="#adminLogged";
-							parentCls="ModuleCurator_F";
-							typeName="Owner";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Name";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ModuleCurator_F";
-							typeName="Addons";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleCurator_F";
-							typeName="Forced";
-						};
+						position[]={18.464788,5.0014391,98.020905};
 					};
-					id=5;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item3
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.6111012,5,51.882324};
-					class args
+					side="West";
+					class Attributes
 					{
-						items=8;
-						class Item0
-						{
-							value="false";
-							parentCls="ALiVE_sys_profile";
-							typeName="debug";
-						};
-						class Item1
-						{
-							value="false";
-							parentCls="ALiVE_sys_profile";
-							typeName="persistent";
-						};
-						class Item2
-						{
-							value="ADD";
-							parentCls="ALiVE_sys_profile";
-							typeName="syncronised";
-						};
-						class Item3
-						{
-							value="2000";
-							parentCls="ALiVE_sys_profile";
-							typeName="spawnRadius";
-						};
-						class Item4
-						{
-							value="2000";
-							parentCls="ALiVE_sys_profile";
-							typeName="spawnTypeHeliRadius";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ALiVE_sys_profile";
-							typeName="spawnTypeJetRadius";
-						};
-						class Item6
-						{
-							value="144";
-							parentCls="ALiVE_sys_profile";
-							typeName="activeLimiter";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ALiVE_sys_profile";
-							typeName="speedModifier";
-						};
+						skill=0.60000002;
+						init="GrpNLD_CO = group this; [""dc"",this] call f_fnc_assignGear;";
+						name="GrpNLD_DC";
+						description="NLD 2IC";
+						isPlayable=1;
 					};
-					id=6;
-					side="LOGIC";
-					vehicle="ALiVE_sys_profile";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
+					id=20;
+					type="NLD_WLD_rifleman";
 				};
 			};
-		};
-		class Item4
-		{
-			side="LOGIC";
-			class Vehicles
+			class Attributes
 			{
-				items=1;
-				class Item0
-				{
-					position[]={148.84419,5,10.229004};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="BUIZERD EEN";
-							parentCls="ALiVE_sup_cas";
-							typeName="cas_callsign";
-						};
-						class Item1
-						{
-							value="NLD_AH64D";
-							parentCls="ALiVE_sup_cas";
-							typeName="cas_type";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="ALiVE_sup_cas";
-							typeName="cas_height";
-						};
-						class Item3
-						{
-							value="";
-							parentCls="ALiVE_sup_cas";
-							typeName="cas_code";
-						};
-					};
-					id=7;
-					side="LOGIC";
-					vehicle="ALiVE_sup_cas";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=0;
-					synchronizations[]={3};
-				};
 			};
-		};
-		class Item5
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={170.26965,5,10.033203};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="LIBELLE TWEE";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_callsign";
-						};
-						class Item1
-						{
-							value="NLD_nh90";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_type";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_height";
-						};
-						class Item3
-						{
-							value="";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_code";
-						};
-					};
-					id=8;
-					side="LOGIC";
-					vehicle="ALiVE_SUP_TRANSPORT";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=1;
-					synchronizations[]={3};
-				};
-			};
-		};
-		class Item6
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={187.89697,5,10.131348};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="LIBELLE EEN";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_callsign";
-						};
-						class Item1
-						{
-							value="NLD_Lynx";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_type";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_height";
-						};
-						class Item3
-						{
-							value="";
-							parentCls="ALiVE_SUP_TRANSPORT";
-							typeName="transport_code";
-						};
-					};
-					id=9;
-					side="LOGIC";
-					vehicle="ALiVE_SUP_TRANSPORT";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=2;
-					synchronizations[]={3};
-				};
-			};
-		};
-		class Item7
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={169.72595,5,37.727051};
-					class args
-					{
-						items=5;
-						class Item0
-						{
-							value="LaserDesignator";
-							parentCls="ALiVE_sup_combatsupport";
-							typeName="combatsupport_item";
-						};
-						class Item1
-						{
-							value="3";
-							parentCls="ALiVE_sup_combatsupport";
-							typeName="combatsupport_casrespawnlimit";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ALiVE_sup_combatsupport";
-							typeName="combatsupport_transportrespawnlimit";
-						};
-						class Item3
-						{
-							value="3";
-							parentCls="ALiVE_sup_combatsupport";
-							typeName="combatsupport_artyrespawnlimit";
-						};
-						class Item4
-						{
-							value="600";
-							parentCls="ALiVE_sup_combatsupport";
-							typeName="combatsupport_respawn";
-						};
-					};
-					id=10;
-					side="LOGIC";
-					vehicle="ALiVE_sup_combatsupport";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=3;
-					synchronizations[]={1,0,2,6};
-				};
-			};
-		};
-		class Item8
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={5.5771003,5,55.756348};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="1";
-							parentCls="ACE_ModuleRespawn";
-							typeName="SavePreDeathGear";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_ModuleRespawn";
-							typeName="RemoveDeadBodiesDisconnected";
-						};
-					};
-					id=11;
-					side="LOGIC";
-					vehicle="ACE_ModuleRespawn";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item9
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.8794453,5,55.75};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="0";
-							parentCls="ace_captives_moduleSettings";
-							typeName="allowHandcuffOwnSide";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ace_captives_moduleSettings";
-							typeName="allowSurrender";
-						};
-					};
-					id=12;
-					side="LOGIC";
-					vehicle="ace_captives_moduleSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item10
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={8.1867552,5,55.808105};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="NLD_WLD_CLS,NLD_DST_CLS,NLD_JGL_CLS,NLD_NFPT_CLS,NLD_NFPG_CLS,NLD_SF_MEDIC,NLD_MTP_MEDIC";
-							parentCls="ACE_moduleAssignMedicRoles";
-							typeName="EnableList";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_moduleAssignMedicRoles";
-							typeName="role";
-						};
-					};
-					id=13;
-					side="LOGIC";
-					vehicle="ACE_moduleAssignMedicRoles";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item11
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={6.7252212,5,55.745605};
-					class args
-					{
-						items=13;
-						class Item0
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="level";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="medicSetting";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="allowLitterCreation";
-						};
-						class Item3
-						{
-							value="1800";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="litterCleanUpDelay";
-						};
-						class Item4
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableScreams";
-						};
-						class Item5
-						{
-							value="1.5";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="playerDamageThreshold";
-						};
-						class Item6
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="AIDamageThreshold";
-						};
-						class Item7
-						{
-							value="0";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="enableUnconsciousnessAI";
-						};
-						class Item8
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="remoteControlledAI";
-						};
-						class Item9
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="preventInstaDeath";
-						};
-						class Item10
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="bleedingCoefficient";
-						};
-						class Item11
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="painCoefficient";
-						};
-						class Item12
-						{
-							value="1";
-							parentCls="ACE_moduleMedicalSettings";
-							typeName="keepLocalSettingsSynced";
-						};
-					};
-					id=14;
-					side="LOGIC";
-					vehicle="ACE_moduleMedicalSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item12
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={4.2953687,5,55.741211};
-					class args
-					{
-						items=5;
-						class Item0
-						{
-							value="-1";
-							parentCls="ACE_ModuleNameTags";
-							typeName="showPlayerNames";
-						};
-						class Item1
-						{
-							value="5";
-							parentCls="ACE_ModuleNameTags";
-							typeName="playerNamesViewDistance";
-						};
-						class Item2
-						{
-							value="-1";
-							parentCls="ACE_ModuleNameTags";
-							typeName="showNamesForAI";
-						};
-						class Item3
-						{
-							value="-1";
-							parentCls="ACE_ModuleNameTags";
-							typeName="showVehicleCrewInfo";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ACE_ModuleNameTags";
-							typeName="showCursorTagForVehicles";
-						};
-					};
-					id=15;
-					side="LOGIC";
-					vehicle="ACE_ModuleNameTags";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item13
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={2.9586782,5,52.051758};
-					class args
-					{
-						items=10;
-						class Item0
-						{
-							value="false";
-							parentCls="ALiVE_require";
-							typeName="debug";
-						};
-						class Item1
-						{
-							value="warning";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_Versioning";
-						};
-						class Item2
-						{
-							value="false";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_AI_DISTRIBUTION";
-						};
-						class Item3
-						{
-							value="true";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_DISABLESAVE";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_DISABLEMARKERS";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_DISABLEADMINACTIONS";
-						};
-						class Item6
-						{
-							value="1";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_PAUSEMODULES";
-						};
-						class Item7
-						{
-							value="300";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_GC_INTERVAL";
-						};
-						class Item8
-						{
-							value="100";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_GC_THRESHHOLD";
-						};
-						class Item9
-						{
-							value="";
-							parentCls="ALiVE_require";
-							typeName="ALiVE_GC_INDIVIDUALTYPES";
-						};
-					};
-					id=16;
-					side="LOGIC";
-					vehicle="ALiVE_require";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item14
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={-9390.334,5,-5116.1802};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="76561197972132272";
-							parentCls="ModuleCurator_F";
-							typeName="Owner";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Name";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ModuleCurator_F";
-							typeName="Addons";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleCurator_F";
-							typeName="Forced";
-						};
-					};
-					id=17;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item15
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={-9719.8799,5,-5116.0923};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="76561198023151588";
-							parentCls="ModuleCurator_F";
-							typeName="Owner";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Name";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ModuleCurator_F";
-							typeName="Addons";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleCurator_F";
-							typeName="Forced";
-						};
-					};
-					id=18;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item16
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={9.8679609,5,55.749512};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="1";
-							parentCls="ace_finger_moduleSettings";
-							typeName="enabled";
-						};
-						class Item1
-						{
-							value="7";
-							parentCls="ace_finger_moduleSettings";
-							typeName="maxRange";
-						};
-					};
-					id=19;
-					side="LOGIC";
-					vehicle="ace_finger_moduleSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
+			id=16;
 		};
 		class Item17
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
-				{
-					position[]={11.187351,5,55.758789};
-					class args
-					{
-						items=1;
-						class Item0
-						{
-							value="1";
-							parentCls="ACE_ModuleSitting";
-							typeName="enable";
-						};
-					};
-					id=20;
-					side="LOGIC";
-					vehicle="ACE_ModuleSitting";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
+				position[]={9.9547558,5,8.2641602};
 			};
+			id=21;
+			type="CBA_main_require";
 		};
 		class Item18
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={9.9937696,5,10.774902};
+			};
+			id=22;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={5.8215942,5,58.40332};
-					class args
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
 					{
-						items=3;
-						class Item0
+						class data
 						{
-							value="";
-							parentCls="ACE_moduleAddSpareParts";
-							typeName="List";
-						};
-						class Item1
-						{
-							value="ACE_Wheel";
-							parentCls="ACE_moduleAddSpareParts";
-							typeName="Part";
-						};
-						class Item2
-						{
-							value="8";
-							parentCls="ACE_moduleAddSpareParts";
-							typeName="Amount";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#adminLogged";
 						};
 					};
-					id=21;
-					side="LOGIC";
-					vehicle="ACE_moduleAddSpareParts";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 		class Item19
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={15.72101,5,13.775391};
+			};
+			id=23;
+			type="ALiVE_sys_profile";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={4.8226728,5,58.380371};
-					class args
+					property="ALiVE_sys_profile_spawnRadius";
+					expression="_this setVariable ['spawnRadius',_value,true];";
+					class Value
 					{
-						items=9;
-						class Item0
+						class data
 						{
-							value="1";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="";
-						};
-						class Item2
-						{
-							value="0.9999";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="repairDamageThreshold";
-						};
-						class Item3
-						{
-							value="0.5";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="consumeItem_ToolKit";
-						};
-						class Item5
-						{
-							value="0";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="fullRepairLocation";
-						};
-						class Item6
-						{
-							value="1";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="addSpareParts";
-						};
-						class Item8
-						{
-							value="0";
-							parentCls="ACE_moduleRepairSettings";
-							typeName="wheelRepairRequiredItems";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2000";
 						};
 					};
-					id=22;
-					side="LOGIC";
-					vehicle="ACE_moduleRepairSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ALiVE_sys_profile_activeLimiter";
+					expression="_this setVariable ['activeLimiter',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="144";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_sys_profile_spawnTypeJetRadius";
+					expression="_this setVariable ['spawnTypeJetRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_sys_profile_speedModifier";
+					expression="_this setVariable ['speedModifier',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_sys_profile_spawnTypeHeliRadius";
+					expression="_this setVariable ['spawnTypeHeliRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2000";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_sys_profile_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_sys_profile_persistent";
+					expression="_this setVariable ['persistent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_sys_profile_syncronised";
+					expression="_this setVariable ['syncronised',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ADD";
+						};
+					};
+				};
+				nAttributes=8;
 			};
 		};
 		class Item20
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={148.92386,5,34.763519};
+			};
+			id=24;
+			type="ALiVE_sup_cas";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={3.8239803,5,58.374512};
-					class args
+					property="ALiVE_sup_cas_cas_type";
+					expression="_this setVariable ['cas_type',_value,true];";
+					class Value
 					{
-						items=1;
-						class Item0
+						class data
 						{
-							value="1";
-							parentCls="ACE_moduleCargoSettings";
-							typeName="enable";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NLD_AH64D";
 						};
 					};
-					id=23;
-					side="LOGIC";
-					vehicle="ACE_moduleCargoSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ALiVE_sup_cas_cas_callsign";
+					expression="_this setVariable ['cas_callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="BUIZERD EEN";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_sup_cas_cas_code";
+					expression="_this setVariable ['cas_code',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_sup_cas_cas_height";
+					expression="_this setVariable ['cas_height',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 		class Item21
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={170.34932,5,34.567719};
+			};
+			id=25;
+			type="ALiVE_SUP_TRANSPORT";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={12.925027,5,55.772949};
-					id=24;
-					side="LOGIC";
-					vehicle="ACE_ModuleFriendlyFire";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
+					property="ALiVE_SUP_TRANSPORT_transport_callsign";
+					expression="_this setVariable ['transport_callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="LIBELLE TWEE";
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_type";
+					expression="_this setVariable ['transport_type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NLD_nh90";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_code";
+					expression="_this setVariable ['transport_code',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_height";
+					expression="_this setVariable ['transport_height',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 		class Item22
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={187.97664,5,34.665863};
+			};
+			id=26;
+			type="ALiVE_SUP_TRANSPORT";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={14.885291,5,55.669434};
-					class args
+					property="ALiVE_SUP_TRANSPORT_transport_callsign";
+					expression="_this setVariable ['transport_callsign',_value,true];";
+					class Value
 					{
-						items=5;
-						class Item0
+						class data
 						{
-							value="1";
-							parentCls="ACE_ModuleMap";
-							typeName="MapIllumination";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_ModuleMap";
-							typeName="MapGlow";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="ACE_ModuleMap";
-							typeName="MapShake";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ACE_ModuleMap";
-							typeName="MapLimitZoom";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ACE_ModuleMap";
-							typeName="MapShowCursorCoordinates";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="LIBELLE EEN";
 						};
 					};
-					id=25;
-					side="LOGIC";
-					vehicle="ACE_ModuleMap";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_type";
+					expression="_this setVariable ['transport_type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NLD_Lynx";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_code";
+					expression="_this setVariable ['transport_code',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_SUP_TRANSPORT_transport_height";
+					expression="_this setVariable ['transport_height',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				nAttributes=4;
 			};
 		};
 		class Item23
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={169.80562,5,62.261566};
+			};
+			id=27;
+			type="ALiVE_sup_combatsupport";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={16.467968,5,55.697266};
-					class args
+					property="ALiVE_sup_combatsupport_combatsupport_item";
+					expression="_this setVariable ['combatsupport_item',_value,true];";
+					class Value
 					{
-						items=5;
-						class Item0
+						class data
 						{
-							value="0";
-							parentCls="ace_zeus_moduleSettings";
-							typeName="zeusAscension";
-						};
-						class Item1
-						{
-							value="0";
-							parentCls="ace_zeus_moduleSettings";
-							typeName="zeusBird";
-						};
-						class Item2
-						{
-							value="0";
-							parentCls="ace_zeus_moduleSettings";
-							typeName="remoteWind";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ace_zeus_moduleSettings";
-							typeName="radioOrdnance";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ace_zeus_moduleSettings";
-							typeName="revealMines";
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="LaserDesignator";
 						};
 					};
-					id=26;
-					side="LOGIC";
-					vehicle="ace_zeus_moduleSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ALiVE_sup_combatsupport_combatsupport_casrespawnlimit";
+					expression="_this setVariable ['combatsupport_casrespawnlimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="3";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_sup_combatsupport_combatsupport_transportrespawnlimit";
+					expression="_this setVariable ['combatsupport_transportrespawnlimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="3";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_sup_combatsupport_combatsupport_artyrespawnlimit";
+					expression="_this setVariable ['combatsupport_artyrespawnlimit',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="3";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_sup_combatsupport_combatsupport_respawn";
+					expression="_this setVariable ['combatsupport_respawn',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="600";
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 		class Item24
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={12.68701,5,17.649414};
+			};
+			id=28;
+			type="ACE_ModuleRespawn";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={4.8522391,5,51.966797};
-					class args
+					property="ACE_ModuleRespawn_RemoveDeadBodiesDisconnected";
+					expression="_this setVariable ['RemoveDeadBodiesDisconnected',_value,true];";
+					class Value
 					{
-						items=8;
-						class Item0
+						class data
 						{
-							value="false";
-							parentCls="ALiVE_sys_data";
-							typeName="debug";
-						};
-						class Item1
-						{
-							value="CouchDB";
-							parentCls="ALiVE_sys_data";
-							typeName="source";
-						};
-						class Item2
-						{
-							value="false";
-							parentCls="ALiVE_sys_data";
-							typeName="saveDateTime";
-						};
-						class Item3
-						{
-							value="false";
-							parentCls="ALiVE_sys_data";
-							typeName="disableStats";
-						};
-						class Item4
-						{
-							value="true";
-							parentCls="ALiVE_sys_data";
-							typeName="disableAAR";
-						};
-						class Item5
-						{
-							value="false";
-							parentCls="ALiVE_sys_data";
-							typeName="disablePerf";
-						};
-						class Item6
-						{
-							value="true";
-							parentCls="ALiVE_sys_data";
-							typeName="disablePerfMon";
-						};
-						class Item7
-						{
-							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900]]";
-							parentCls="ALiVE_sys_data";
-							typeName="customPerfMonCode";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
 						};
 					};
-					id=27;
-					side="LOGIC";
-					vehicle="ALiVE_sys_data";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ACE_ModuleRespawn_SavePreDeathGear";
+					expression="_this setVariable ['SavePreDeathGear',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item25
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={9.9893541,5,17.643066};
+			};
+			id=29;
+			type="ace_captives_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={6.7175388,5,51.882324};
-					class args
+					property="ace_captives_moduleSettings_requireSurrender";
+					expression="_this setVariable ['requireSurrender',_value,true];";
+					class Value
 					{
-						items=35;
-						class Item0
+						class data
 						{
-							value="false";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="debug";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="VIEW_DISTANCE";
-						};
-						class Item2
-						{
-							value="20000";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="maxVD";
-						};
-						class Item3
-						{
-							value="500";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="minVD";
-						};
-						class Item4
-						{
-							value="5";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="maxTG";
-						};
-						class Item5
-						{
-							value="1";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="minTG";
-						};
-						class Item6
-						{
-							value="";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="PERSISTENCE";
-						};
-						class Item7
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="enablePlayerPersistence";
-						};
-						class Item8
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="allowReset";
-						};
-						class Item9
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="allowManualSave";
-						};
-						class Item10
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="allowDiffClass";
-						};
-						class Item11
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="saveLoadout";
-						};
-						class Item12
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="saveAmmo";
-						};
-						class Item13
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="saveHealth";
-						};
-						class Item14
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="savePosition";
-						};
-						class Item15
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="saveScores";
-						};
-						class Item16
-						{
-							value="false";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="storeToDB";
-						};
-						class Item17
-						{
-							value="0";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="autoSaveTime";
-						};
-						class Item18
-						{
-							value="";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="CREW_INFO";
-						};
-						class Item19
-						{
-							value="2";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="crewinfo_ui_setting";
-						};
-						class Item20
-						{
-							value="";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="PLAYER_TAGS";
-						};
-						class Item21
-						{
-							value="None";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_style_setting";
-						};
-						class Item22
-						{
-							value="false";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_onview_setting";
-						};
-						class Item23
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_displayrank_setting";
-						};
-						class Item24
-						{
-							value="true";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_displaygroup_setting";
-						};
-						class Item25
-						{
-							value="false";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_invehicle_setting";
-						};
-						class Item26
-						{
-							value="[""CAManBase"", ""Car"", ""Tank"", ""StaticWeapon"", ""Helicopter"", ""Plane""]";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_targets_setting";
-						};
-						class Item27
-						{
-							value="20";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_distance_setting";
-						};
-						class Item28
-						{
-							value="0.75";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_tolerance_setting";
-						};
-						class Item29
-						{
-							value="0.65";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_scale_setting";
-						};
-						class Item30
-						{
-							value="1.1";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_height_setting";
-						};
-						class Item31
-						{
-							value="#FFFFFF";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_namecolour_setting";
-						};
-						class Item32
-						{
-							value="#A8F000";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_groupcolour_setting";
-						};
-						class Item33
-						{
-							value="#FFB300";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_thisgroupleadernamecolour_setting";
-						};
-						class Item34
-						{
-							value="#009D91";
-							parentCls="ALiVE_SYS_playeroptions";
-							typeName="playertags_thisgroupcolour_setting";
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
 						};
 					};
-					id=28;
-					side="LOGIC";
-					vehicle="ALiVE_SYS_playeroptions";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
 				};
+				class Attribute1
+				{
+					property="ace_captives_moduleSettings_allowHandcuffOwnSide";
+					expression="_this setVariable ['allowHandcuffOwnSide',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_captives_moduleSettings_allowSurrender";
+					expression="_this setVariable ['allowSurrender',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item26
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={15.297,5,17.701};
+			};
+			id=30;
+			type="ACE_moduleAssignMedicRoles";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={96.987251,5,99.96582};
-					id=29;
-					side="LOGIC";
-					vehicle="ModuleCoverMap_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=4;
-					synchronizations[]={5};
+					property="ACE_moduleAssignMedicRoles_EnableList";
+					expression="_this setVariable ['EnableList',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="NLD_WLD_CLS,NLD_DST_CLS,NLD_JGL_CLS,NLD_NFPT_CLS,NLD_NFPG_CLS,NLD_SF_MEDIC,NLD_MTP_MEDIC";
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ACE_moduleAssignMedicRoles_role";
+					expression="_this setVariable ['role',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item27
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={13.835,5,17.639};
+			};
+			id=31;
+			type="ACE_moduleMedicalSettings";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={98.544617,5,99.97168};
-					id=30;
-					side="LOGIC";
-					vehicle="LocationArea_F";
-					leader=1;
-					skill=0.40000001;
-					syncId=5;
-					synchronizations[]={4,7};
+					property="ACE_moduleMedicalSettings_litterCleanUpDelay";
+					expression="_this setVariable ['litterCleanUpDelay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1800;
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ACE_moduleMedicalSettings_enableScreams";
+					expression="_this setVariable ['enableScreams',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_moduleMedicalSettings_preventInstaDeath";
+					expression="_this setVariable ['preventInstaDeath',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_moduleMedicalSettings_bleedingCoefficient";
+					expression="_this setVariable ['bleedingCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_moduleMedicalSettings_remoteControlledAI";
+					expression="_this setVariable ['remoteControlledAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ACE_moduleMedicalSettings_enableUnconsciousnessAI";
+					expression="_this setVariable ['enableUnconsciousnessAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ACE_moduleMedicalSettings_painCoefficient";
+					expression="_this setVariable ['painCoefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ACE_moduleMedicalSettings_AIDamageThreshold";
+					expression="_this setVariable ['AIDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ACE_moduleMedicalSettings_playerDamageThreshold";
+					expression="_this setVariable ['playerDamageThreshold',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1.25;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ACE_moduleMedicalSettings_level";
+					expression="_this setVariable ['level',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ACE_moduleMedicalSettings_allowLitterCreation";
+					expression="_this setVariable ['allowLitterCreation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ACE_moduleMedicalSettings_keepLocalSettingsSynced";
+					expression="_this setVariable ['keepLocalSettingsSynced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ACE_moduleMedicalSettings_medicSetting";
+					expression="_this setVariable ['medicSetting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=13;
 			};
 		};
 		class Item28
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={11.405277,5,17.634277};
+			};
+			id=32;
+			type="ACE_ModuleNameTags";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={170.41525,5,60.649414};
-					class args
+					property="ACE_ModuleNameTags_showCursorTagForVehicles";
+					expression="_this setVariable ['showCursorTagForVehicles',_value,true];";
+					class Value
 					{
-						items=11;
-						class Item0
+						class data
 						{
-							value="SCHOORSTEEN EEN";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_callsign";
-						};
-						class Item1
-						{
-							value="B_MBT_01_arty_F";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_type";
-						};
-						class Item2
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_he";
-						};
-						class Item3
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_illum";
-						};
-						class Item4
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_smoke";
-						};
-						class Item5
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_guided";
-						};
-						class Item6
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_cluster";
-						};
-						class Item7
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_lg";
-						};
-						class Item8
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_mine";
-						};
-						class Item9
-						{
-							value="30";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_atmine";
-						};
-						class Item10
-						{
-							value="16";
-							parentCls="ALiVE_sup_artillery";
-							typeName="artillery_rockets";
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
 						};
 					};
-					id=31;
-					side="LOGIC";
-					vehicle="ALiVE_sup_artillery";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-					syncId=6;
-					synchronizations[]={3};
 				};
+				class Attribute1
+				{
+					property="ACE_ModuleNameTags_showNamesForAI";
+					expression="_this setVariable ['showNamesForAI',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ACE_ModuleNameTags_showVehicleCrewInfo";
+					expression="_this setVariable ['showVehicleCrewInfo',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ACE_ModuleNameTags_showPlayerNames";
+					expression="_this setVariable ['showPlayerNames',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ACE_ModuleNameTags_playerNamesViewDistance";
+					expression="_this setVariable ['playerNamesViewDistance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 		class Item29
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={10.068587,5,13.944824};
+			};
+			id=33;
+			type="ALiVE_require";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={15.076483,5,110.17334};
-					id=32;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_NLD_3";
-					init="[synchronizedObjects this,[""GrpNLD_CO"",""GrpNLD_DC""],true,false] call f_fnc_mountGroups;";
+					property="ALiVE_require_ALiVE_GC_THRESHHOLD";
+					expression="_this setVariable ['ALiVE_GC_THRESHHOLD',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="100";
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ALiVE_require_ALiVE_GC_INTERVAL";
+					expression="_this setVariable ['ALiVE_GC_INTERVAL',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="300";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ALiVE_require_ALiVE_DISABLEADMINACTIONS";
+					expression="_this setVariable ['ALiVE_DISABLEADMINACTIONS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_require_ALiVE_Versioning";
+					expression="_this setVariable ['ALiVE_Versioning',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="warning";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_require_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_require_ALiVE_PAUSEMODULES";
+					expression="_this setVariable ['ALiVE_PAUSEMODULES',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_require_ALiVE_GC_INDIVIDUALTYPES";
+					expression="_this setVariable ['ALiVE_GC_INDIVIDUALTYPES',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_require_ALiVE_DISABLEMARKERS";
+					expression="_this setVariable ['ALiVE_DISABLEMARKERS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_require_ALiVE_DISABLESAVE";
+					expression="_this setVariable ['ALiVE_DISABLESAVE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_require_ALiVE_AI_DISTRIBUTION";
+					expression="_this setVariable ['ALiVE_AI_DISTRIBUTION',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=10;
 			};
 		};
 		class Item30
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={-9390.334,5,-5116.1802};
+			};
+			id=34;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={34.728737,5,119.78369};
-					id=33;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_NLD_ALPHA";
-					init="[synchronizedObjects this,[""GrpNLD_ALPHA""],true,false] call f_fnc_mountGroups;";
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561197972132272";
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 		class Item31
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={-9719.8799,5,-5116.0923};
+			};
+			id=35;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={55.451233,5,119.95068};
-					id=34;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_NLD_BRAVO";
-					init="[synchronizedObjects this,[""GrpNLD_BRAVO""],true,false] call f_fnc_mountGroups;";
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="76561198023151588";
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleInfo";
+					expression="false";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3;
+						};
+					};
+				};
+				nAttributes=5;
 			};
 		};
 		class Item32
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
+				position[]={16.978001,5,17.643};
+			};
+			id=36;
+			type="ace_finger_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={75.507942,5,120.0332};
-					id=35;
-					side="LOGIC";
-					vehicle="Logic";
-					leader=1;
-					skill=0.60000002;
-					text="F3_preMount_NLD_CHARLIE";
-					init="[synchronizedObjects this,[""GrpNLD_CHARLIE""],true,false] call f_fnc_mountGroups;";
+					property="ace_finger_moduleSettings_maxRange";
+					expression="_this setVariable ['maxRange',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
 				};
+				class Attribute1
+				{
+					property="ace_finger_moduleSettings_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=2;
 			};
 		};
 		class Item33
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=8;
-				class Item0
+				position[]={18.297001,5,17.652};
+			};
+			id=37;
+			type="ACE_ModuleSitting";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={33.671055,5,96.962402};
-					special="NONE";
-					id=36;
-					side="WEST";
-					vehicle="NLD_WLD_SL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_SL";
-					init="GrpNLD_ALPHA = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Alpha Squad Leader";
+					property="ACE_ModuleSitting_enable";
+					expression="_this setVariable ['enable',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
 				};
-				class Item1
-				{
-					position[]={35.50388,5,95.930664};
-					special="NONE";
-					id=37;
-					side="WEST";
-					vehicle="NLD_WLD_CLS";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_M";
-					init="GrpNLD_ALPHA = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Alpha Medic";
-				};
-				class Item2
-				{
-					position[]={33.727051,5,94.798828};
-					special="NONE";
-					id=38;
-					side="WEST";
-					vehicle="NLD_WLD_TL";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_FTL1";
-					init="GrpNLD_ALPHA = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Alpha FTL";
-				};
-				class Item3
-				{
-					position[]={36.689121,5,95.926758};
-					special="NONE";
-					id=39;
-					side="WEST";
-					vehicle="NLD_WLD_AR";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_AR1";
-					init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Alpha AR";
-				};
-				class Item4
-				{
-					position[]={35.520302,5,94.067383};
-					special="NONE";
-					id=40;
-					side="WEST";
-					vehicle="NLD_WLD_AR";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_AR2";
-					init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Alpha AR";
-				};
-				class Item5
-				{
-					position[]={36.709526,5,94.047852};
-					special="NONE";
-					id=41;
-					side="WEST";
-					vehicle="NLD_WLD_LAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_LAT1";
-					init="GrpNLD_ALPHA = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Alpha LAT";
-				};
-				class Item6
-				{
-					position[]={38.030731,5,93.987793};
-					id=42;
-					side="WEST";
-					vehicle="NLD_WLD_rifleman";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_R2";
-					init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Alpha Rifleman";
-				};
-				class Item7
-				{
-					position[]={38.003078,5,95.881348};
-					id=43;
-					side="WEST";
-					vehicle="NLD_WLD_rifleman";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_ALPHA_R";
-					init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Alpha Rifleman";
-				};
+				nAttributes=1;
 			};
 		};
 		class Item34
 		{
-			side="LOGIC";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=1;
-				class Item0
-				{
-					position[]={2.7564483,5,60.537109};
-					class args
-					{
-						items=10;
-						class Item0
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="enabled";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="simulateForSnipers";
-						};
-						class Item2
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="simulateForGroupMembers";
-						};
-						class Item3
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="simulateForEveryone";
-						};
-						class Item4
-						{
-							value="0";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="disabledInFullAutoMode";
-						};
-						class Item5
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="ammoTemperatureEnabled";
-						};
-						class Item6
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="barrelLengthInfluenceEnabled";
-						};
-						class Item7
-						{
-							value="1";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="bulletTraceEnabled";
-						};
-						class Item8
-						{
-							value="0";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="simulationInterval";
-						};
-						class Item9
-						{
-							value="3000";
-							parentCls="ace_advanced_ballistics_ModuleSettings";
-							typeName="simulationRadius";
-						};
-					};
-					id=44;
-					side="LOGIC";
-					vehicle="ace_advanced_ballistics_ModuleSettings";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
+				position[]={20.035,5,17.666};
 			};
+			id=41;
+			type="ACE_ModuleFriendlyFire";
 		};
 		class Item35
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=8;
-				class Item0
+				position[]={21.995001,5,17.563};
+			};
+			id=42;
+			type="ACE_ModuleMap";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={54.760902,5,97.106445};
-					special="NONE";
-					id=45;
-					side="WEST";
-					vehicle="NLD_WLD_SL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_SL";
-					init="GrpNLD_BRAVO = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Bravo Squad Leader";
+					property="ACE_ModuleMap_MapShake";
+					expression="_this setVariable ['MapShake',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
 				};
-				class Item1
+				class Attribute1
 				{
-					position[]={56.242409,5,96.051758};
-					special="NONE";
-					id=46;
-					side="WEST";
-					vehicle="NLD_WLD_CLS";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_M";
-					init="GrpNLD_BRAVO = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Bravo Medic";
+					property="ACE_ModuleMap_MapShowCursorCoordinates";
+					expression="_this setVariable ['MapShowCursorCoordinates',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item2
+				class Attribute2
 				{
-					position[]={54.82869,5,94.625488};
-					special="NONE";
-					id=47;
-					side="WEST";
-					vehicle="NLD_WLD_TL";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_FTL1";
-					init="GrpNLD_BRAVO = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Bravo FTL";
+					property="ACE_ModuleMap_DefaultChannel";
+					expression="_this setVariable ['DefaultChannel',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
 				};
-				class Item3
+				class Attribute3
 				{
-					position[]={57.863743,5,95.961914};
-					special="NONE";
-					id=48;
-					side="WEST";
-					vehicle="NLD_WLD_AR";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_AR1";
-					init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Bravo AR";
+					property="ACE_ModuleMap_MapIllumination";
+					expression="_this setVariable ['MapIllumination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
 				};
-				class Item4
+				class Attribute4
 				{
-					position[]={56.21796,5,93.765625};
-					special="NONE";
-					id=49;
-					side="WEST";
-					vehicle="NLD_WLD_AR";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_AR2";
-					init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Bravo AR";
+					property="ACE_ModuleMap_MapGlow";
+					expression="_this setVariable ['MapGlow',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
 				};
-				class Item5
+				class Attribute5
 				{
-					position[]={57.875652,5,93.723145};
-					special="NONE";
-					id=50;
-					side="WEST";
-					vehicle="NLD_WLD_LAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_LAT1";
-					init="GrpNLD_BRAVO = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Bravo LAT";
+					property="ACE_ModuleMap_MapLimitZoom";
+					expression="_this setVariable ['MapLimitZoom',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item6
-				{
-					position[]={59.492573,5,93.776367};
-					id=51;
-					side="WEST";
-					vehicle="NLD_WLD_GL";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_R2";
-					init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Bravo Rifleman";
-				};
-				class Item7
-				{
-					position[]={59.446762,5,95.847168};
-					id=52;
-					side="WEST";
-					vehicle="NLD_WLD_rifleman";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_BRAVO_R";
-					init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
-					description="NLD Bravo Rifleman";
-				};
+				nAttributes=6;
 			};
 		};
 		class Item36
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=8;
-				class Item0
+				position[]={23.577999,5,17.59};
+			};
+			id=43;
+			type="ace_zeus_moduleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={74.713959,5,97.049316};
-					special="NONE";
-					id=53;
-					side="WEST";
-					vehicle="NLD_WLD_SL";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_SL";
-					init="GrpNLD_CHARLIE = group this; [""co"",this] call f_fnc_assignGear;";
-					description="NLD Charlie Squad Leader";
+					property="ace_zeus_moduleSettings_remoteWind";
+					expression="_this setVariable ['remoteWind',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item1
+				class Attribute1
 				{
-					position[]={76.492966,5,96.249512};
-					special="NONE";
-					id=54;
-					side="WEST";
-					vehicle="NLD_WLD_CLS";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_M";
-					init="GrpNLD_CHARLIE = group this; [""m"",this] call f_fnc_assignGear;";
-					description="NLD Charlie Medic";
+					property="ace_zeus_moduleSettings_zeusAscension";
+					expression="_this setVariable ['zeusAscension',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item2
+				class Attribute2
 				{
-					position[]={74.731117,5,94.737793};
-					special="NONE";
-					id=55;
-					side="WEST";
-					vehicle="NLD_WLD_TL";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_FTL1";
-					init="GrpNLD_CHARLIE = group this; [""ftl"",this] call f_fnc_assignGear;";
-					description="NLD Charlie FTL";
+					property="ace_zeus_moduleSettings_radioOrdnance";
+					expression="_this setVariable ['radioOrdnance',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item3
+				class Attribute3
 				{
-					position[]={80.164009,5,96.103027};
-					special="NONE";
-					id=56;
-					side="WEST";
-					vehicle="NLD_WLD_AR";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_AR1";
-					init="GrpNLD_CHARLIE = group this; [""ar"",this] call f_fnc_assignGear;";
-					description="NLD Charlie AR";
+					property="ace_zeus_moduleSettings_revealMines";
+					expression="_this setVariable ['revealMines',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=-1;
+						};
+					};
 				};
-				class Item4
+				class Attribute4
 				{
-					position[]={78.515968,5,96.115234};
-					special="NONE";
-					id=57;
-					side="WEST";
-					vehicle="NLD_WLD_LAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_LAT1";
-					init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Charlie LAT";
+					property="ace_zeus_moduleSettings_zeusBird";
+					expression="_this setVariable ['zeusBird',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
 				};
-				class Item5
-				{
-					position[]={80.270103,5,93.618164};
-					special="NONE";
-					id=58;
-					side="WEST";
-					vehicle="NLD_WLD_LAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_LAT2";
-					init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
-					description="NLD Charlie LAT";
-				};
-				class Item6
-				{
-					position[]={76.438957,5,93.54248};
-					special="NONE";
-					id=59;
-					side="WEST";
-					vehicle="NLD_WLD_SLA";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_DM_1";
-					init="GrpNLD_CHARLIE = group this; [""dm"",this] call f_fnc_assignGear;";
-					description="NLD Charlie Designated Marksman";
-				};
-				class Item7
-				{
-					position[]={78.398071,5,93.597656};
-					id=60;
-					side="WEST";
-					vehicle="NLD_WLD_EXPL";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="GrpNLD_CHARLIE_ENG";
-					init="GrpNLD_CHARLIE = group this; [""eng"",this] call f_fnc_assignGear;";
-					description="NLD Charlie Explosives Expert";
-				};
+				nAttributes=5;
 			};
 		};
 		class Item37
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=2;
-				class Item0
+				position[]={11.962149,5,13.859863};
+			};
+			id=44;
+			type="ALiVE_sys_data";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={34.457817,5,76.897461};
-					id=61;
-					side="WEST";
-					vehicle="NLD_Helipilot";
-					player="PLAY CDG";
-					leader=1;
-					rank="CAPTAIN";
-					skill=0.60000002;
-					text="UnitNATO_AH1_P";
-					init="GrpNATO_AH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNLD_AH1;";
-					description="NLD Attack Helo 1 Pilot";
+					property="ALiVE_sys_data_disablePerfMon";
+					expression="_this setVariable ['disablePerfMon',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
 				};
-				class Item1
+				class Attribute1
 				{
-					position[]={36.793556,5,75.700195};
-					id=62;
-					side="WEST";
-					vehicle="NLD_Helicrew";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitNLD_AH1_CP";
-					init="GrpNLD_AH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_AH1,[0]];";
-					description="NLD Attack Helo Gunner (Repair)";
+					property="ALiVE_sys_data_source";
+					expression="_this setVariable ['source',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CouchDB";
+						};
+					};
 				};
+				class Attribute2
+				{
+					property="ALiVE_sys_data_customPerfMonCode";
+					expression="_this setVariable ['customPerfMonCode',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[['entities',150],['vehicles',300],['agents',450],['allDead',600],['objects',750],['triggers',900]]";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ALiVE_sys_data_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_sys_data_disableStats";
+					expression="_this setVariable ['disableStats',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_sys_data_saveDateTime";
+					expression="_this setVariable ['saveDateTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_sys_data_disableAAR";
+					expression="_this setVariable ['disableAAR',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_sys_data_disablePerf";
+					expression="_this setVariable ['disablePerf',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				nAttributes=8;
 			};
 		};
 		class Item38
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=4;
-				class Item0
+				position[]={13.827448,5,13.775391};
+			};
+			id=45;
+			type="ALiVE_SYS_playeroptions";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={54.918621,5,77.294434};
-					id=63;
-					side="WEST";
-					vehicle="B_Helipilot_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CAPTAIN";
-					skill=0.60000002;
-					text="UnitNLD_TH1_P";
-					init="GrpNLD_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TH1;";
-					description="NLD Transport Helo 1 Pilot";
+					property="ALiVE_SYS_playeroptions_saveScores";
+					expression="_this setVariable ['saveScores',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
 				};
-				class Item1
+				class Attribute1
 				{
-					position[]={57.445972,5,75.759277};
-					id=64;
-					side="WEST";
-					vehicle="B_Helipilot_F";
-					player="PLAY CDG";
-					rank="LIEUTENANT";
-					skill=0.60000002;
-					text="UnitNLD_TH1_CP";
-					init="GrpNLD_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[0]];";
-					description="NLD Transport Helo 1 Co-Pilot";
+					property="ALiVE_SYS_playeroptions_playertags_groupcolour_setting";
+					expression="_this setVariable ['playertags_groupcolour_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#A8F000";
+						};
+					};
 				};
-				class Item2
+				class Attribute2
 				{
-					position[]={59.030041,5,75.708496};
-					id=65;
-					side="WEST";
-					vehicle="B_soldier_repair_F";
-					player="PLAY CDG";
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitNLD_TH1_G1";
-					init="GrpNLD_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[1]];";
-					description="NLD Transport Helo 1 Crew Chief (Repair)";
+					property="ALiVE_SYS_playeroptions_playertags_tolerance_setting";
+					expression="_this setVariable ['playertags_tolerance_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.75;
+						};
+					};
 				};
-				class Item3
+				class Attribute3
 				{
-					position[]={60.578941,5,75.677246};
-					id=66;
-					side="WEST";
-					vehicle="B_helicrew_F";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TH1_G2";
-					init="GrpNLD_TH1 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[2]];";
-					description="NLD Transport Helo 1 Gunner";
+					property="ALiVE_SYS_playeroptions_playertags_scale_setting";
+					expression="_this setVariable ['playertags_scale_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.64999998;
+						};
+					};
 				};
+				class Attribute4
+				{
+					property="ALiVE_SYS_playeroptions_autoSaveTime";
+					expression="_this setVariable ['autoSaveTime',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="0";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_SYS_playeroptions_playertags_thisgroupleadernamecolour_setting";
+					expression="_this setVariable ['playertags_thisgroupleadernamecolour_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#FFB300";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_SYS_playeroptions_savePosition";
+					expression="_this setVariable ['savePosition',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_SYS_playeroptions_storeToDB";
+					expression="_this setVariable ['storeToDB',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_SYS_playeroptions_saveHealth";
+					expression="_this setVariable ['saveHealth',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_SYS_playeroptions_allowManualSave";
+					expression="_this setVariable ['allowManualSave',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_SYS_playeroptions_allowDiffClass";
+					expression="_this setVariable ['allowDiffClass',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="ALiVE_SYS_playeroptions_debug";
+					expression="_this setVariable ['debug',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="ALiVE_SYS_playeroptions_playertags_height_setting";
+					expression="_this setVariable ['playertags_height_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1.1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="ALiVE_SYS_playeroptions_playertags_onview_setting";
+					expression="_this setVariable ['playertags_onview_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="ALiVE_SYS_playeroptions_playertags_namecolour_setting";
+					expression="_this setVariable ['playertags_namecolour_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#FFFFFF";
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="ALiVE_SYS_playeroptions_playertags_distance_setting";
+					expression="_this setVariable ['playertags_distance_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=20;
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="ALiVE_SYS_playeroptions_playertags_displayrank_setting";
+					expression="_this setVariable ['playertags_displayrank_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute17
+				{
+					property="ALiVE_SYS_playeroptions_VIEW_DISTANCE";
+					expression="_this setVariable ['VIEW_DISTANCE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute18
+				{
+					property="ALiVE_SYS_playeroptions_enablePlayerPersistence";
+					expression="_this setVariable ['enablePlayerPersistence',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute19
+				{
+					property="ALiVE_SYS_playeroptions_minTG";
+					expression="_this setVariable ['minTG',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="1";
+						};
+					};
+				};
+				class Attribute20
+				{
+					property="ALiVE_SYS_playeroptions_allowReset";
+					expression="_this setVariable ['allowReset',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute21
+				{
+					property="ALiVE_SYS_playeroptions_maxTG";
+					expression="_this setVariable ['maxTG',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="5";
+						};
+					};
+				};
+				class Attribute22
+				{
+					property="ALiVE_SYS_playeroptions_CREW_INFO";
+					expression="_this setVariable ['CREW_INFO',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute23
+				{
+					property="ALiVE_SYS_playeroptions_PERSISTENCE";
+					expression="_this setVariable ['PERSISTENCE',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute24
+				{
+					property="ALiVE_SYS_playeroptions_saveLoadout";
+					expression="_this setVariable ['saveLoadout',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute25
+				{
+					property="ALiVE_SYS_playeroptions_playertags_displaygroup_setting";
+					expression="_this setVariable ['playertags_displaygroup_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute26
+				{
+					property="ALiVE_SYS_playeroptions_playertags_thisgroupcolour_setting";
+					expression="_this setVariable ['playertags_thisgroupcolour_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="#009D91";
+						};
+					};
+				};
+				class Attribute27
+				{
+					property="ALiVE_SYS_playeroptions_PLAYER_TAGS";
+					expression="_this setVariable ['PLAYER_TAGS',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute28
+				{
+					property="ALiVE_SYS_playeroptions_saveAmmo";
+					expression="_this setVariable ['saveAmmo',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="true";
+						};
+					};
+				};
+				class Attribute29
+				{
+					property="ALiVE_SYS_playeroptions_crewinfo_ui_setting";
+					expression="_this setVariable ['crewinfo_ui_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="2";
+						};
+					};
+				};
+				class Attribute30
+				{
+					property="ALiVE_SYS_playeroptions_playertags_style_setting";
+					expression="_this setVariable ['playertags_style_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="None";
+						};
+					};
+				};
+				class Attribute31
+				{
+					property="ALiVE_SYS_playeroptions_minVD";
+					expression="_this setVariable ['minVD',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="500";
+						};
+					};
+				};
+				class Attribute32
+				{
+					property="ALiVE_SYS_playeroptions_playertags_targets_setting";
+					expression="_this setVariable ['playertags_targets_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[""CAManBase"", ""Car"", ""Tank"", ""StaticWeapon"", ""Helicopter"", ""Plane""]";
+						};
+					};
+				};
+				class Attribute33
+				{
+					property="ALiVE_SYS_playeroptions_playertags_invehicle_setting";
+					expression="_this setVariable ['playertags_invehicle_setting',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="false";
+						};
+					};
+				};
+				class Attribute34
+				{
+					property="ALiVE_SYS_playeroptions_maxVD";
+					expression="_this setVariable ['maxVD',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="20000";
+						};
+					};
+				};
+				nAttributes=35;
 			};
 		};
 		class Item39
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=3;
-				class Item0
-				{
-					position[]={33.85051,5,44.640137};
-					special="NONE";
-					id=67;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitNLD_TNK1_C";
-					init="GrpNLD_TNK1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK1;";
-					description="NLD Vehicle Commander";
-				};
-				class Item1
-				{
-					position[]={35.808609,5,42.895996};
-					special="NONE";
-					id=68;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK1_G";
-					init="GrpNLD_TNK1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK1;";
-					description="NLD Vehicle Gunner";
-				};
-				class Item2
-				{
-					position[]={38.325981,5,42.800781};
-					special="NONE";
-					id=69;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK1_D";
-					init="GrpNLD_TNK1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK1;";
-					description="NLD Vehicle Driver";
-				};
+				position[]={101.31394,5,118.65625};
 			};
+			id=46;
+			type="ModuleCoverMap_F";
 		};
 		class Item40
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=3;
-				class Item0
-				{
-					position[]={44.046902,5,44.383301};
-					special="NONE";
-					id=70;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitNLD_TNK2_C";
-					init="GrpNLD_TNK2 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK2;";
-					description="NLD Vehicle Commander";
-				};
-				class Item1
-				{
-					position[]={46.005001,5,42.63916};
-					special="NONE";
-					id=71;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK2_G";
-					init="GrpNLD_TNK2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK2;";
-					description="NLD Vehicle Gunner";
-				};
-				class Item2
-				{
-					position[]={48.522373,5,42.543945};
-					special="NONE";
-					id=72;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK2_D";
-					init="GrpNLD_TNK2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK2;";
-					description="NLD Vehicle Driver";
-				};
+				position[]={102.87131,5,118.66211};
 			};
+			id=47;
+			type="LocationArea_F";
 		};
 		class Item41
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
 			{
-				items=3;
-				class Item0
+				position[]={170.49492,5,85.183929};
+			};
+			id=48;
+			type="ALiVE_sup_artillery";
+			class CustomAttributes
+			{
+				class Attribute0
 				{
-					position[]={53.985813,5,44.177246};
-					special="NONE";
-					id=73;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitNLD_TNK3_C";
-					init="GrpNLD_TNK3 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK3;";
-					description="NLD Vehicle Commander";
+					property="ALiVE_sup_artillery_artillery_lg";
+					expression="_this setVariable ['artillery_lg',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
 				};
-				class Item1
+				class Attribute1
 				{
-					position[]={55.943913,5,42.433105};
-					special="NONE";
-					id=74;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK3_G";
-					init="GrpNLD_TNK3 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK3;";
-					description="NLD Vehicle Gunner";
+					property="ALiVE_sup_artillery_artillery_cluster";
+					expression="_this setVariable ['artillery_cluster',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
 				};
-				class Item2
+				class Attribute2
 				{
-					position[]={58.461285,5,42.337891};
-					special="NONE";
-					id=75;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK3_D";
-					init="GrpNLD_TNK3 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK3;";
-					description="NLD Vehicle Driver";
+					property="ALiVE_sup_artillery_artillery_callsign";
+					expression="_this setVariable ['artillery_callsign',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SCHOORSTEEN EEN";
+						};
+					};
 				};
+				class Attribute3
+				{
+					property="ALiVE_sup_artillery_artillery_rockets";
+					expression="_this setVariable ['artillery_rockets',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="16";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ALiVE_sup_artillery_artillery_smoke";
+					expression="_this setVariable ['artillery_smoke',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ALiVE_sup_artillery_artillery_illum";
+					expression="_this setVariable ['artillery_illum',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ALiVE_sup_artillery_artillery_atmine";
+					expression="_this setVariable ['artillery_atmine',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ALiVE_sup_artillery_artillery_he";
+					expression="_this setVariable ['artillery_he',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ALiVE_sup_artillery_artillery_type";
+					expression="_this setVariable ['artillery_type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="B_MBT_01_arty_F";
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ALiVE_sup_artillery_artillery_mine";
+					expression="_this setVariable ['artillery_mine',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ALiVE_sup_artillery_artillery_guided";
+					expression="_this setVariable ['artillery_guided',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="30";
+						};
+					};
+				};
+				nAttributes=11;
 			};
 		};
 		class Item42
 		{
-			side="WEST";
-			class Vehicles
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={15.076483,5,110.17334};
+			};
+			name="F3_preMount_NLD_3";
+			init="[synchronizedObjects this,[""GrpNLD_CO"",""GrpNLD_DC""],true,false] call f_fnc_mountGroups;";
+			id=49;
+			type="Logic";
+		};
+		class Item43
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={34.728737,5,119.78369};
+			};
+			name="F3_preMount_NLD_ALPHA";
+			init="[synchronizedObjects this,[""GrpNLD_ALPHA""],true,false] call f_fnc_mountGroups;";
+			id=50;
+			type="Logic";
+		};
+		class Item44
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={55.451233,5,119.95068};
+			};
+			name="F3_preMount_NLD_BRAVO";
+			init="[synchronizedObjects this,[""GrpNLD_BRAVO""],true,false] call f_fnc_mountGroups;";
+			id=51;
+			type="Logic";
+		};
+		class Item45
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={75.507942,5,120.0332};
+			};
+			name="F3_preMount_NLD_CHARLIE";
+			init="[synchronizedObjects this,[""GrpNLD_CHARLIE""],true,false] call f_fnc_mountGroups;";
+			id=52;
+			type="Logic";
+		};
+		class Item46
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={33.671055,5.0014391,97.012405};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_ALPHA = group this; [""co"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_SL";
+						description="NLD Alpha Squad Leader";
+						isPlayable=1;
+					};
+					id=54;
+					type="NLD_WLD_SL";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={35.50388,5.0014391,95.980667};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_ALPHA = group this; [""m"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_M";
+						description="NLD Alpha Medic";
+						isPlayable=1;
+					};
+					id=55;
+					type="NLD_WLD_CLS";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={33.727051,5.0014391,94.848831};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_ALPHA = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_FTL1";
+						description="NLD Alpha FTL";
+						isPlayable=1;
+					};
+					id=56;
+					type="NLD_WLD_TL";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={36.689121,5.0014391,95.976761};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_AR1";
+						description="NLD Alpha AR";
+						isPlayable=1;
+					};
+					id=57;
+					type="NLD_WLD_AR";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={35.520302,5.0014391,94.117386};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_ALPHA = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_AR2";
+						description="NLD Alpha AR";
+						isPlayable=1;
+					};
+					id=58;
+					type="NLD_WLD_AR";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={36.709526,5.0014391,94.097855};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_ALPHA = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_LAT1";
+						description="NLD Alpha LAT";
+						isPlayable=1;
+					};
+					id=59;
+					type="NLD_WLD_LAT";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={30.520302,5.0014391,90.556679};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_R2";
+						description="NLD Alpha Rifleman";
+						isPlayable=1;
+					};
+					id=60;
+					type="NLD_WLD_rifleman";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={41.709526,5.0014391,90.524254};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_ALPHA = group this; [""r"",this] call f_fnc_assignGear;";
+						name="GrpNLD_ALPHA_R";
+						description="NLD Alpha Rifleman";
+						isPlayable=1;
+					};
+					id=61;
+					type="NLD_WLD_rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=53;
+		};
+		class Item47
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={8.6220722,5,17.608398};
+			};
+			id=62;
+			type="ace_advanced_ballistics_ModuleSettings";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_advanced_ballistics_ModuleSettings_simulationRadius";
+					expression="_this setVariable ['simulationRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=3000;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ace_advanced_ballistics_ModuleSettings_barrelLengthInfluenceEnabled";
+					expression="_this setVariable ['barrelLengthInfluenceEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ace_advanced_ballistics_ModuleSettings_bulletTraceEnabled";
+					expression="_this setVariable ['bulletTraceEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ace_advanced_ballistics_ModuleSettings_simulationInterval";
+					expression="_this setVariable ['simulationInterval',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ace_advanced_ballistics_ModuleSettings_disabledInFullAutoMode";
+					expression="_this setVariable ['disabledInFullAutoMode',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ace_advanced_ballistics_ModuleSettings_simulateForEveryone";
+					expression="_this setVariable ['simulateForEveryone',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ace_advanced_ballistics_ModuleSettings_simulateForSnipers";
+					expression="_this setVariable ['simulateForSnipers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ace_advanced_ballistics_ModuleSettings_simulateForGroupMembers";
+					expression="_this setVariable ['simulateForGroupMembers',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ace_advanced_ballistics_ModuleSettings_ammoTemperatureEnabled";
+					expression="_this setVariable ['ammoTemperatureEnabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ace_advanced_ballistics_ModuleSettings_enabled";
+					expression="_this setVariable ['enabled',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				nAttributes=10;
+			};
+		};
+		class Item48
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={54.760902,5.0014391,97.156448};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_BRAVO = group this; [""co"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_SL";
+						description="NLD Bravo Squad Leader";
+						isPlayable=1;
+					};
+					id=64;
+					type="NLD_WLD_SL";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={56.242409,5.0014391,96.101761};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_BRAVO = group this; [""m"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_M";
+						description="NLD Bravo Medic";
+						isPlayable=1;
+					};
+					id=65;
+					type="NLD_WLD_CLS";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={54.82869,5.0014391,94.675491};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_BRAVO = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_FTL1";
+						description="NLD Bravo FTL";
+						isPlayable=1;
+					};
+					id=66;
+					type="NLD_WLD_TL";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={57.863743,5.0014391,96.011917};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_AR1";
+						description="NLD Bravo AR";
+						isPlayable=1;
+					};
+					id=67;
+					type="NLD_WLD_AR";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={56.21796,5.0014391,93.815628};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_BRAVO = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_AR2";
+						description="NLD Bravo AR";
+						isPlayable=1;
+					};
+					id=68;
+					type="NLD_WLD_AR";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={57.875652,5.0014391,93.773148};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_BRAVO = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_LAT1";
+						description="NLD Bravo LAT";
+						isPlayable=1;
+					};
+					id=69;
+					type="NLD_WLD_LAT";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={51.21796,5.0014391,89.960693};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_R2";
+						description="NLD Bravo Rifleman";
+						isPlayable=1;
+					};
+					id=70;
+					type="NLD_WLD_GL";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={62.875652,5.0014391,89.890175};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_BRAVO = group this; [""r"",this] call f_fnc_assignGear;";
+						name="GrpNLD_BRAVO_R";
+						description="NLD Bravo Rifleman";
+						isPlayable=1;
+					};
+					id=71;
+					type="NLD_WLD_rifleman";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=63;
+		};
+		class Item49
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={74.713959,5.0014391,97.099319};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_CHARLIE = group this; [""co"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_SL";
+						description="NLD Charlie Squad Leader";
+						isPlayable=1;
+					};
+					id=73;
+					type="NLD_WLD_SL";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={76.492966,5.0014391,96.299515};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_CHARLIE = group this; [""m"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_M";
+						description="NLD Charlie Medic";
+						isPlayable=1;
+					};
+					id=74;
+					type="NLD_WLD_CLS";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={74.731117,5.0014391,94.787796};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_CHARLIE = group this; [""ftl"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_FTL1";
+						description="NLD Charlie FTL";
+						isPlayable=1;
+					};
+					id=75;
+					type="NLD_WLD_TL";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={80.164009,5.0014391,96.15303};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_CHARLIE = group this; [""ar"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_AR1";
+						description="NLD Charlie AR";
+						isPlayable=1;
+					};
+					id=76;
+					type="NLD_WLD_AR";
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={78.515968,5.0014391,96.165237};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_LAT1";
+						description="NLD Charlie LAT";
+						isPlayable=1;
+					};
+					id=77;
+					type="NLD_WLD_LAT";
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={80.270103,5.0014391,93.668167};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_CHARLIE = group this; [""rat"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_LAT2";
+						description="NLD Charlie LAT";
+						isPlayable=1;
+					};
+					id=78;
+					type="NLD_WLD_LAT";
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={76.438957,5.0014391,93.592484};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_CHARLIE = group this; [""dm"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_DM_1";
+						description="NLD Charlie Designated Marksman";
+						isPlayable=1;
+					};
+					id=79;
+					type="NLD_WLD_SLA";
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={85.270103,5.0014391,89.753609};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_CHARLIE = group this; [""eng"",this] call f_fnc_assignGear;";
+						name="GrpNLD_CHARLIE_ENG";
+						description="NLD Charlie Explosives Expert";
+						isPlayable=1;
+					};
+					id=80;
+					type="NLD_WLD_EXPL";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=72;
+		};
+		class Item50
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={34.457817,5.0014391,76.997467};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CAPTAIN";
+						init="GrpNATO_AH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNLD_AH1;";
+						name="UnitNATO_AH1_P";
+						description="NLD Attack Helo 1 Pilot";
+						isPlayable=1;
+					};
+					id=82;
+					type="NLD_Helipilot";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={39.457817,5.0014391,75.347473};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpNLD_AH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_AH1,[0]];";
+						name="UnitNLD_AH1_CP";
+						description="NLD Attack Helo Gunner (Repair)";
+						isPlayable=1;
+					};
+					id=83;
+					type="NLD_Helicrew";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=81;
+		};
+		class Item51
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=4;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={54.918621,5.0014391,77.39444};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CAPTAIN";
+						init="GrpNLD_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TH1;";
+						name="UnitNLD_TH1_P";
+						description="NLD Transport Helo 1 Pilot";
+						isPlayable=1;
+					};
+					id=85;
+					type="B_Helipilot_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={59.918621,5.0014391,75.744446};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="LIEUTENANT";
+						init="GrpNLD_TH1 = group this; [""pp"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[0]];";
+						name="UnitNLD_TH1_CP";
+						description="NLD Transport Helo 1 Co-Pilot";
+						isPlayable=1;
+					};
+					id=86;
+					type="B_Helipilot_F";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={49.918621,5.0014391,75.744446};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_TH1 = group this; [""pcc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[1]];";
+						name="UnitNLD_TH1_G1";
+						description="NLD Transport Helo 1 Crew Chief (Repair)";
+						isPlayable=1;
+					};
+					id=87;
+					type="B_soldier_repair_F";
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={64.918625,5.0014391,73.005455};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TH1 = group this; [""pc"",this] call f_fnc_assignGear; this moveInTurret [VehNLD_TH1,[2]];";
+						name="UnitNLD_TH1_G2";
+						description="NLD Transport Helo 1 Gunner";
+						isPlayable=1;
+					};
+					id=88;
+					type="B_helicrew_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=84;
+		};
+		class Item52
+		{
+			dataType="Group";
+			side="West";
+			class Entities
 			{
 				items=3;
 				class Item0
 				{
-					position[]={63.564243,5,44.074219};
-					special="NONE";
-					id=76;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					leader=1;
-					rank="SERGEANT";
-					skill=0.60000002;
-					text="UnitNLD_TNK4_C";
-					init="GrpNLD_TNK4 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK4;";
-					description="NLD Vehicle Commander";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={33.85051,5.0014391,44.690136};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_TNK1 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK1;";
+						name="UnitNLD_TNK1_C";
+						description="NLD Vehicle Commander";
+						isPlayable=1;
+					};
+					id=90;
+					type="NLD_Crew";
 				};
 				class Item1
 				{
-					position[]={65.522339,5,42.330078};
-					special="NONE";
-					id=77;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK4_G";
-					init="GrpNLD_TNK4 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK4;";
-					description="NLD Vehicle Gunner";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={35.808609,5.0014391,42.945995};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK1 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK1;";
+						name="UnitNLD_TNK1_G";
+						description="NLD Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=91;
+					type="NLD_Crew";
 				};
 				class Item2
 				{
-					position[]={68.039719,5,42.234863};
-					special="NONE";
-					id=78;
-					side="WEST";
-					vehicle="NLD_Crew";
-					player="PLAY CDG";
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_TNK4_D";
-					init="GrpNLD_TNK4 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK4;";
-					description="NLD Vehicle Driver";
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={38.325981,5.0014391,42.85078};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK1 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK1;";
+						name="UnitNLD_TNK1_D";
+						description="NLD Vehicle Driver";
+						isPlayable=1;
+					};
+					id=92;
+					type="NLD_Crew";
 				};
 			};
-		};
-		class Item43
-		{
-			side="WEST";
-			class Vehicles
+			class Attributes
 			{
-				items=2;
-				class Item0
-				{
-					position[]={95.341026,5,94.214844};
-					special="NONE";
-					id=79;
-					side="WEST";
-					vehicle="NLD_WLD_AMMG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_MMG1_AG";
-					init="GrpNLD_MMG1 = group this; [""mmgag"",this,""nld_units""] call f_fnc_assignGear; ";
-				};
-				class Item1
-				{
-					position[]={97.553307,5,92.266113};
-					special="NONE";
-					id=80;
-					side="WEST";
-					vehicle="NLD_WLD_MMG";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNLD_MMG1_G";
-					init="GrpNLD_MMG1 = group this; [""mmgg"",this,""nld_units""] call f_fnc_assignGear; ";
-				};
 			};
-		};
-		class Item44
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={95.393707,5,83.047852};
-					special="NONE";
-					id=81;
-					side="WEST";
-					vehicle="NLD_WLD_AMMG";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_HMG1_AG";
-					init="GrpNLD_HMG1 = group this; [""hmgag"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD HMG1 Assistant";
-				};
-				class Item1
-				{
-					position[]={97.658646,5,81.099121};
-					special="NONE";
-					id=82;
-					side="WEST";
-					vehicle="NLD_WLD_MMG";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNLD_HMG1_G";
-					init="GrpNLD_HMG1 = group this; [""hmgg"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD HMG1 Gunner";
-				};
-			};
-		};
-		class Item45
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={95.334015,5,71.661621};
-					special="NONE";
-					id=83;
-					side="WEST";
-					vehicle="NLD_WLD_AMAT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_MAT1_AG";
-					init="GrpNLD_MAT1 = group this; [""matag"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Medium AT Team 1 Spotter (Leader)";
-				};
-				class Item1
-				{
-					position[]={97.651634,5,69.712891};
-					special="NONE";
-					id=84;
-					side="WEST";
-					vehicle="NLD_WLD_MAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNLD_MAT1_G";
-					init="GrpNLD_MAT1 = group this; [""matg"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Medium AT Team 1 Gunner";
-				};
-			};
-		};
-		class Item46
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={95.292587,5,59.148438};
-					special="NONE";
-					id=85;
-					side="WEST";
-					vehicle="NLD_WLD_AMAT";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_HAT1_AG";
-					init="GrpNLD_HAT1 = group this; [""hatag"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Heavy AT Team 1 Spotter (Leader)";
-				};
-				class Item1
-				{
-					position[]={97.610207,5,57.199707};
-					special="NONE";
-					id=86;
-					side="WEST";
-					vehicle="NLD_WLD_MAT";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="UnitNLD_HAT1_G";
-					init="GrpNLD_HAT1 = group this; [""hatg"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Heavy AT Team 1 Gunner";
-				};
-			};
-		};
-		class Item47
-		{
-			side="WEST";
-			class Vehicles
-			{
-				items=2;
-				class Item0
-				{
-					position[]={95.230057,5,48.649414};
-					id=87;
-					side="WEST";
-					vehicle="B_spotter_F";
-					player="PLAY CDG";
-					leader=1;
-					rank="CORPORAL";
-					skill=0.60000002;
-					text="UnitNLD_ST1_SP";
-					init="GrpNLD_ST1 = group this; [""sp"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Sniper Team 1 Spotter (Leader)";
-				};
-				class Item1
-				{
-					position[]={97.634262,5,46.891602};
-					id=88;
-					side="WEST";
-					vehicle="B_sniper_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					health=0.99000001;
-					text="UnitNLD_ST1_SN";
-					init="GrpNLD_ST1 = group this; [""sn"",this,""nld_units""] call f_fnc_assignGear; ";
-					description="NLD Sniper Team 1 Sniper";
-				};
-			};
-		};
-	};
-	class Vehicles
-	{
-		items=13;
-		class Item0
-		{
-			position[]={56.614319,5,60.921875};
 			id=89;
-			side="EMPTY";
-			vehicle="NLD_CH47_Unarmed";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_TH1";
 		};
-		class Item1
+		class Item53
 		{
-			position[]={34.955345,5,67.280273};
-			id=90;
-			side="EMPTY";
-			vehicle="NLD_AH64D";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_AH1";
-		};
-		class Item2
-		{
-			position[]={13.585688,5,97.62793};
-			id=91;
-			side="EMPTY";
-			vehicle="NLD_WLD_Fennek";
-			skill=0.60000002;
-			text="VehNLD_CAR1";
-			init="[""v_car"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item3
-		{
-			position[]={34.827591,5,98.214844};
-			id=92;
-			side="EMPTY";
-			vehicle="B_supplyCrate_F";
-			skill=0.60000002;
-			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item4
-		{
-			position[]={34.822201,5,107.4585};
-			id=93;
-			side="EMPTY";
-			vehicle="B_Truck_01_transport_F";
-			skill=0.60000002;
-			text="VehNLD_TR1";
-			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item5
-		{
-			position[]={55.544693,5,107.37598};
-			id=94;
-			side="EMPTY";
-			vehicle="B_Truck_01_transport_F";
-			skill=0.60000002;
-			text="VehNLD_TR2";
-			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item6
-		{
-			position[]={75.601402,5,107.70801};
-			id=95;
-			side="EMPTY";
-			vehicle="B_Truck_01_transport_F";
-			skill=0.60000002;
-			text="VehNLD_TR3";
-			init="[""v_tr"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item7
-		{
-			position[]={35.869034,5,36.010254};
-			special="NONE";
-			id=96;
-			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_TNK1";
-			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item8
-		{
-			position[]={46.065426,5,35.753418};
-			special="NONE";
-			id=97;
-			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_TNK2";
-			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item9
-		{
-			position[]={56.004337,5,35.547363};
-			special="NONE";
-			id=98;
-			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_TNK3";
-			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item10
-		{
-			position[]={65.582764,5,35.444336};
-			special="NONE";
-			id=99;
-			side="EMPTY";
-			vehicle="NLD_WLD_Leo2";
-			leader=1;
-			skill=0.60000002;
-			text="VehNLD_TNK4";
-			init="[""v_ifv"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item11
-		{
-			position[]={55.608673,5,98.255371};
-			id=100;
-			side="EMPTY";
-			vehicle="B_supplyCrate_F";
-			skill=0.60000002;
-			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
-		};
-		class Item12
-		{
-			position[]={75.579575,5,98.255371};
-			id=101;
-			side="EMPTY";
-			vehicle="B_supplyCrate_F";
-			skill=0.60000002;
-			init="[""crate_med"",this,""nld_units""] call f_fnc_assignGear";
-		};
-	};
-	class Markers
-	{
-		items=2;
-		class Item0
-		{
-			position[]={55.247253,5,129.52002};
-			name="respawn_west";
-			type="flag_Netherlands";
-		};
-		class Item1
-		{
-			position[]={7954.7949,5,10594.579};
-			name="arty_target";
-			type="Empty";
-		};
-	};
-	class Sensors
-	{
-		items=1;
-		class Item0
-		{
-			position[]={100.02242,5,99.974121};
-			a=100;
-			b=100;
-			rectangular=1;
-			interruptable=1;
-			age="UNKNOWN";
-			class Effects
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={44.046902,5.0014391,44.4333};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_TNK2 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK2;";
+						name="UnitNLD_TNK2_C";
+						description="NLD Vehicle Commander";
+						isPlayable=1;
+					};
+					id=94;
+					type="NLD_Crew";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={46.005001,5.0014391,42.689159};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK2 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK2;";
+						name="UnitNLD_TNK2_G";
+						description="NLD Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=95;
+					type="NLD_Crew";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={48.522373,5.0014391,42.593945};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK2 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK2;";
+						name="UnitNLD_TNK2_D";
+						description="NLD Vehicle Driver";
+						isPlayable=1;
+					};
+					id=96;
+					type="NLD_Crew";
+				};
+			};
+			class Attributes
 			{
 			};
-			synchronizations[]={5};
-			syncId=7;
+			id=93;
+		};
+		class Item54
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={53.985813,5.0014391,44.227245};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_TNK3 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK3;";
+						name="UnitNLD_TNK3_C";
+						description="NLD Vehicle Commander";
+						isPlayable=1;
+					};
+					id=98;
+					type="NLD_Crew";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={55.943913,5.0014391,42.483105};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK3 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK3;";
+						name="UnitNLD_TNK3_G";
+						description="NLD Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=99;
+					type="NLD_Crew";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={58.461285,5.0014391,42.38789};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK3 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK3;";
+						name="UnitNLD_TNK3_D";
+						description="NLD Vehicle Driver";
+						isPlayable=1;
+					};
+					id=100;
+					type="NLD_Crew";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=97;
+		};
+		class Item55
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={63.564243,5.0014391,44.124218};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="SERGEANT";
+						init="GrpNLD_TNK4 = group this; [""vc"",this] call f_fnc_assignGear; this moveInCommander VehNLD_TNK4;";
+						name="UnitNLD_TNK4_C";
+						description="NLD Vehicle Commander";
+						isPlayable=1;
+					};
+					id=102;
+					type="NLD_Crew";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={65.522339,5.0014391,42.380077};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK4 = group this; [""vg"",this] call f_fnc_assignGear; this moveInGunner VehNLD_TNK4;";
+						name="UnitNLD_TNK4_G";
+						description="NLD Vehicle Gunner";
+						isPlayable=1;
+					};
+					id=103;
+					type="NLD_Crew";
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={68.039719,5.0014391,42.284863};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_TNK4 = group this; [""vd"",this] call f_fnc_assignGear; this moveInDriver VehNLD_TNK4;";
+						name="UnitNLD_TNK4_D";
+						description="NLD Vehicle Driver";
+						isPlayable=1;
+					};
+					id=104;
+					type="NLD_Crew";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=101;
+		};
+		class Item56
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={95.341026,5.0014391,94.264847};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_MMG1 = group this; [""mmgag"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_MMG1_AG";
+						isPlayable=1;
+					};
+					id=106;
+					type="NLD_WLD_AMMG";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={97.553307,5.0014391,92.316116};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_MMG1 = group this; [""mmgg"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_MMG1_G";
+						isPlayable=1;
+					};
+					id=107;
+					type="NLD_WLD_MMG";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=105;
+		};
+		class Item57
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={95.393707,5.0014391,83.097855};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_HMG1 = group this; [""hmgag"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_HMG1_AG";
+						description="NLD HMG1 Assistant";
+						isPlayable=1;
+					};
+					id=109;
+					type="NLD_WLD_AMMG";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={97.658646,5.0014391,81.149124};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_HMG1 = group this; [""hmgg"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_HMG1_G";
+						description="NLD HMG1 Gunner";
+						isPlayable=1;
+					};
+					id=110;
+					type="NLD_WLD_MMG";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=108;
+		};
+		class Item58
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={95.334015,5.0014391,71.711624};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_MAT1 = group this; [""matag"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_MAT1_AG";
+						description="NLD Medium AT Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=112;
+					type="NLD_WLD_AMAT";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={97.651634,5.0014391,69.762894};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_MAT1 = group this; [""matg"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_MAT1_G";
+						description="NLD Medium AT Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=113;
+					type="NLD_WLD_MAT";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=111;
+		};
+		class Item59
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={95.292587,5.0014391,59.198437};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_HAT1 = group this; [""hatag"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_HAT1_AG";
+						description="NLD Heavy AT Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=115;
+					type="NLD_WLD_AMAT";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={97.610207,5.0014391,57.249706};
+					};
+					side="West";
+					class Attributes
+					{
+						skill=0.60000002;
+						init="GrpNLD_HAT1 = group this; [""hatg"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_HAT1_G";
+						description="NLD Heavy AT Team 1 Gunner";
+						isPlayable=1;
+					};
+					id=116;
+					type="NLD_WLD_MAT";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=114;
+		};
+		class Item60
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={95.230057,5.0014391,48.749413};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						rank="CORPORAL";
+						init="GrpNLD_ST1 = group this; [""sp"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_ST1_SP";
+						description="NLD Sniper Team 1 Spotter (Leader)";
+						isPlayable=1;
+					};
+					id=118;
+					type="B_spotter_F";
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={100.23006,5.0014391,47.099411};
+					};
+					side="West";
+					class Attributes
+					{
+						health=0.99000001;
+						skill=0.60000002;
+						init="GrpNLD_ST1 = group this; [""sn"",this,""nld_units""] call f_fnc_assignGear; ";
+						name="UnitNLD_ST1_SN";
+						description="NLD Sniper Team 1 Sniper";
+						isPlayable=1;
+					};
+					id=119;
+					type="B_sniper_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=117;
 		};
 	};
-};
-class Intro
-{
-	addOns[]=
+	class Connections
 	{
-		"a3_map_altis",
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=8428644;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=7;
-		day=6;
-		hour=14;
-		minute=15;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
-	};
-};
-class OutroWin
-{
-	addOns[]=
-	{
-		"a3_map_altis",
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=4674277;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=7;
-		day=6;
-		hour=14;
-		minute=15;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
-	};
-};
-class OutroLoose
-{
-	addOns[]=
-	{
-		"a3_map_altis",
-		"map_vr"
-	};
-	addOnsAuto[]=
-	{
-		"map_vr"
-	};
-	randomSeed=6586695;
-	class Intel
-	{
-		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
-		startWind=0.1;
-		startWaves=0.1;
-		forecastWeather=0.30000001;
-		forecastWind=0.1;
-		forecastWaves=0.1;
-		forecastLightnings=0.1;
-		year=2035;
-		month=7;
-		day=6;
-		hour=14;
-		minute=15;
-		startFogDecay=0.0049333;
-		forecastFogDecay=0.0049333;
+		class LinkIDProvider
+		{
+			nextID=6;
+		};
+		class Links
+		{
+			items=6;
+			class Item0
+			{
+				linkID=0;
+				item0=47;
+				item1=2;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=27;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=27;
+				item1=25;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=27;
+				item1=26;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=48;
+				item1=27;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=47;
+				item1=46;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
 	};
 };
