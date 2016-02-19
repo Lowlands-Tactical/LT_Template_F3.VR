@@ -65,8 +65,8 @@ _attach2 = "acc_flashlight";	// Flashlight
 _silencer1 = "muzzle_snds_M";	// 5.56 suppressor
 _silencer2 = "muzzle_snds_H";	// 6.5 suppressor
 
-_scope1 = "optic_MRCO";	// Holosight
-_scope2 = "optic_DMR";				// De optic ding
+_scope1 = "CUP_optic_CompM4"; // Fuck you Willem
+_scope2 = "optic_DMS";				// De optic ding
 _scope3 = "optic_SOS";				// SOS Scope - 18x - 75x
 
 _bipod1 = "bipod_01_F_snd";		// Default bipod
@@ -245,7 +245,7 @@ _specOp = [];
 // Basic clothing
 // The outfit-piece is randomly selected from the array for each unit
 _baseUniform = ["NLD_WLD_Camo"];
-_baseHelmet = ["NLD_WLD_Helmet"];
+_baseHelmet = ["H_HelmetB_camo"];
 _baseGlasses = [];
 
 // Vests
@@ -253,9 +253,9 @@ _baseGlasses = [];
 // _mediumRig = ["V_PlateCarrier1_rgr","V_PlateCarrier2_rgr"]; 	// default for all infantry classes
 // _heavyRig = ["V_PlateCarrier3_rgr"];
 
-_lightRig = ["NLD_WLD_Vest"];
-_mediumRig = ["NLD_WLD_Vest"];
-_heavyRig = ["NLD_WLD_Vest"];
+_lightRig = ["V_PlateCarrierIA2_dgtl"];
+_mediumRig = ["V_PlateCarrierIA2_dgtl"];
+_heavyRig = ["V_PlateCarrierIA2_dgtl"];
 
 // Diver
 _diverUniform =  ["U_B_Wetsuit"];
@@ -416,6 +416,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,4];
 		{_unit addItem _firstaid} forEach [1,2,3,4];
 		["m"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: FIRE TEAM LEADER
@@ -434,6 +435,7 @@ switch (_typeofUnit) do
 		_unit addItem "murshun_cigs_lighter";
 		["g"] call _backpack;
 		(unitBackpack _unit) addItemCargoGlobal ["ItemAndroid",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 
@@ -449,6 +451,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		["ar"] call _backpack;
 		_attachments pushback (_bipod1);
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: ASSISTANT AUTOMATIC RIFLEMAN
@@ -462,6 +465,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addWeapon "Binocular";
 		["aar"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: RIFLEMAN (AT)
@@ -476,6 +480,7 @@ switch (_typeofUnit) do
 		["rat"] call _backpack;
 		(unitBackpack _unit) addMagazineCargoGlobal [_RATmag,1];
 		_unit addweapon _RAT;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: DESIGNATED MARKSMAN
@@ -489,11 +494,6 @@ switch (_typeofUnit) do
 		_unit addmagazines [_pistolmag,3];
 		_unit addweapon _pistol;
 		_unit addWeapon "ACE_Vector";
-		_unit addItem "ACE_ATragMX";
-		_unit addItem "ACE_DAGR";
-		_unit addItem "ACE_SpottingScope";
-		_unit addItem "ACE_RangeCard";
-		_unit addItem "ACE_Kestrel4500";
 		["dm"] call _backpack;
 		_attachments = [_attach1,_scope2];
 	};
@@ -509,6 +509,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		["mmg"] call _backpack;
 		_attachments pushback (_bipod1);
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MEDIUM MG ASSISTANT GUNNER
@@ -522,6 +523,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,2];
 		_unit addmagazines [_smokegrenade,2];
 		["mmgag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY MG GUNNER
@@ -534,6 +536,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["hmgg"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY MG ASSISTANT GUNNER
@@ -547,6 +550,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["hmgag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MEDIUM AT GUNNER
@@ -558,6 +562,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,2];
 		_unit addweapon _carbine;
 		_unit addweapon _MAT;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MEDIUM AT ASSISTANT GUNNER
@@ -571,6 +576,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,2];
 		["matag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY AT GUNNER
@@ -580,6 +586,7 @@ switch (_typeofUnit) do
 		_unit addweapon _carbine;
 		["hatg"] call _backpack;
 		_unit addWeapon _HAT;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY AT ASSISTANT GUNNER
@@ -593,6 +600,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["hatag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MORTAR GUNNER
@@ -605,6 +613,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["mtrg"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MORTAR ASSISTANT GUNNER
@@ -618,6 +627,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,1];
 		_unit addWeapon "ACE_Yardage450";
 		["mtrag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MEDIUM SAM GUNNER
@@ -630,6 +640,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,1];
 		_unit addmagazines [_grenade,1];
 		_unit addweapon _SAM;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: MEDIUM SAM ASSISTANT GUNNER
@@ -642,6 +653,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_grenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["msamag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY SAM GUNNER
@@ -654,6 +666,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["hsamg"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: HEAVY SAM ASSISTANT GUNNER
@@ -667,6 +680,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit addmagazines [_smokegrenade,1];
 		["hsamag"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: SNIPER
@@ -678,6 +692,7 @@ switch (_typeofUnit) do
 		_unit addweapon _pistol;
 		_unit addmagazines [_smokegrenade,2];
 		_attachments = [_scope3];
+		_unit addItem "ItemTabHCam";
 	};
 
 // LOADOUT: SPOTTER
@@ -695,6 +710,7 @@ switch (_typeofUnit) do
 		_unit addItem "ACE_SpottingScope";
 		_unit addItem "ACE_RangeCard";
 		_unit addItem "ACE_Kestrel4500";
+		_unit addItem "ItemTabHCam";
 	};
 
 // LOADOUT: VEHICLE COMMANDER
@@ -717,6 +733,7 @@ switch (_typeofUnit) do
 		_unit addItem "ItemGPS";
 		_unit assignItem "ItemGPS";
 		["cc"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: VEHICLE GUNNER
@@ -746,6 +763,7 @@ switch (_typeofUnit) do
 		_unit addweapon _smg;
 		_unit addmagazines [_smokegrenade,2];
 		["cc"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: AIR VEHICLE CREW
@@ -767,6 +785,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_satchel,2];
 		_unit addItem "MineDetector";
 		["eng"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: ENGINEER (MINES)
@@ -780,6 +799,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_APmine2,2];
 		_unit addItem "MineDetector";
 		["engm"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: UAV OPERATOR
@@ -793,7 +813,6 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,1];
 		_unit linkItem _uavterminal;
 		["uav"] call _backpack;
-		_unit addMagazines ["Laserbatteries",4];	// Batteries added for the F3 UAV Recharging component
 	};
 
 // LOADOUT: Diver
@@ -807,6 +826,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_smokegrenade,3];
 		_attachments = [_attach1,_scope1,_silencer1];
 		["div"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: RIFLEMAN
@@ -819,6 +839,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
 		["r"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: CARABINEER
@@ -831,6 +852,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
 		["car"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: SUBMACHINEGUNNER
@@ -842,6 +864,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,3];
 		["smg"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: GRENADIER
@@ -856,6 +879,7 @@ switch (_typeofUnit) do
 		_unit addmagazines [_mgrenade,3];
 		_unit addmagazines [_smokegrenade,2];
 		["g"] call _backpack;
+		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // CARGO: CAR - room for 10 weapons and 50 cargo items

@@ -171,6 +171,11 @@ case "dm":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 2];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 2];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_ATragMX",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_DAGR",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_SpottingScope",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_RangeCard",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_Kestrel4500",1];
 
 	};
 	// LOADOUT: HEAVY
@@ -181,6 +186,11 @@ case "dm":
 		(unitBackpack _unit) addMagazineCargoGlobal [_grenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_mgrenade, 4];
 		(unitBackpack _unit) addMagazineCargoGlobal [_smokegrenade, 4];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_ATragMX",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_DAGR",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_SpottingScope",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_RangeCard",1];
+		(unitBackpack _unit) addItemCargoGlobal ["ACE_Kestrel4500",1];
 	};
 };
 
@@ -574,6 +584,3 @@ case "cc":
 	clearMagazineCargoGlobal (unitBackpack _unit);
 	(unitBackpack _unit) addItemCargoGlobal ["ToolKit",1];
 };
-
-// Everybody needs this! :p
-// (unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
