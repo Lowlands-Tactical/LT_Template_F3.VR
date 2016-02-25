@@ -13,26 +13,7 @@ if (!isDedicated && (isNull player)) then
 
 // DECLARE VARIABLES AND FUNCTIONS
 
-private ["_unitfaction"];
-
 waitUntil {!isnil "f_var_debugMode"};
-
-// ====================================================================================
-
-// DETECT PLAYER FACTION
-// The following code detects what faction the player's slot belongs to, and stores
-// it in the private variable _unitfaction
-
-_unitfaction = toLower (faction player);
-
-// If the unitfaction is different from the group leader's faction, the latters faction is used
-if (_unitfaction != toLower (faction (leader group player))) then {_unitfaction = toLower (faction (leader group player))};
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Player faction: %1",_unitfaction];
-	};
 
 // ====================================================================================
 
@@ -44,136 +25,104 @@ if (serverCommandAvailable "#kick") then {
 
 #include "f\briefing\f_briefing_admin.sqf"
 
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-		player sideChat format ["DEBUG (briefing.sqf): Briefing for host selected.",_unitfaction];
-	};
 };
 
 
 // ====================================================================================
 
-// BRIEFING: BLUFOR > NLD
-// The following block of code executes only if the player is in a NATO slot; it
-// automatically includes a file which contains the appropriate briefing data.
+// NOTES: Checklist
+// The code below creates a checklist of notes
 
-if (_unitfaction == "nld_units") exitwith {
+_ckl = player createDiaryRecord ["diary", ["Checklist","<br/>
+<b>De PC/GC:</b><br/>
+- Is er een 2ic?<br/>
+- Is de intentie van de missie duidelijk?<br/>
+- Zijn de stappen en de reis nodig duidelijk?<br/>
+- Zijn de benodigde assets aanwezig<br/>
+- Kunnen al deze assets benaderd worden<br/>
+- Kan de reis van A naar B veilig gemaakt worden en wat zijn de gevaren?<br/>
+- Is er een ERV?<br/>
+- Is dit gecommuniceerd?<br/>
+<br/>
+<br/>
+<b>De VTL:</b><br/>
+- Doen de radios van de groepsleden het (Radio check)?<br/>
+- Doet de long-range radio het?<br/>
+"]];
 
-#include "f\briefing\f_briefing_nld.sqf"
 
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
+// NOTES: CREDITS
+// The code below creates the administration sub-section of notes.
 
-
-// ====================================================================================
-
-// BRIEFING: BLUFOR > NATO
-// The following block of code executes only if the player is in a NATO slot; it
-// automatically includes a file which contains the appropriate briefing data.
-
-if (_unitfaction == "blu_f") exitwith {
-
-#include "f\briefing\f_briefing_nato.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
-
-// ====================================================================================
-
-// BRIEFING: FIA
-// The following block of code executes only if the player is in a FIA slot; it
-// automatically includes a file which contains the appropriate briefing data.
-
-if (_unitfaction in ["blu_g_f","ind_g_f","opf_g_f"]) exitwith {
-
-#include "f\briefing\f_briefing_fia.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
+_cre = player createDiaryRecord ["diary", ["Credits","
+<br/>
+*** Insert mission credits here. ***
+<br/>
+Template door Sacha Ligthert
+<br/><br/>
+Made with F3 (http://www.ferstaberinde.com/f3/en/)
+"]];
 
 // ====================================================================================
 
-// BRIEFING: OPFOR > CSAT
-// The following block of code executes only if the player is in a CSAT slot; it
-// automatically includes a file which contains the appropriate briefing data.
+// NOTES: ADMINISTRATION
+// The code below creates the administration sub-section of notes.
 
-if (_unitfaction == "opf_f") exitwith {
-
-#include "f\briefing\f_briefing_csat.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
-// ====================================================================================
-
-// BRIEFING: INDEPENDENT > AAF
-// The following block of code executes only if the player is in a AAF
-// slot; it automatically includes a file which contains the appropriate briefing data.
-
-if (_unitfaction == "ind_f") exitwith {
-
-#include "f\briefing\f_briefing_aaf.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
+_adm = player createDiaryRecord ["diary", ["Administration","
+<br/>
+*** Insert information on administration and logistics here. ***
+"]];
 
 // ====================================================================================
 
-// BRIEFING: CIVILIAN
-// The following block of code executes only if the player is in a CIVILIAN
-// slot; it automatically includes a file which contains the appropriate briefing data.
+// NOTES: EXECUTION
+// The code below creates the execution sub-section of notes.
 
-if (_unitfaction == "civ_f") exitwith {
-
-#include "f\briefing\f_briefing_civ.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
-
-// ====================================================================================
-
-// BRIEFING: ZEUS
-// The following block of code executes only if the player is in a ZEUS (Gamelogic) slot; it automatically includes a file which contains the appropriate briefing data.
-
-if (_unitfaction == "") exitwith {
-
-#include "f\briefing\f_briefing_zeus.sqf"
-
-// DEBUG
-	if (f_var_debugMode == 1) then
-	{
-	player sideChat format ["DEBUG (briefing.sqf): Briefing for %1 slot selected.",_unitfaction];
-	};
-};
-
+_exe = player createDiaryRecord ["diary", ["Execution","
+<br/>
+<font size='18'>COMMANDER'S INTENT</font>
+<br/>
+*** Insert very short summary of plan here. ***
+<br/><br/>
+<font size='18'>MOVEMENT PLAN</font>
+<br/>
+*** Insert movement instructions here. ***
+<br/><br/>
+<font size='18'>FIRE SUPPORT PLAN</font>
+<br/>
+*** Insert fire support instructions here. ***
+<br/><br/>
+<font size='18'>SPECIAL TASKS</font>
+<br/>
+*** Insert instructions for specific units here. ***
+"]];
 
 // ====================================================================================
 
-// ERROR CHECKING
-// If the faction of the unit cannot be defined, the script exits with an error.
+// NOTES: MISSION
+// The code below creates the mission sub-section of notes.
 
-player globalchat format ["DEBUG (briefing.sqf): Faction %1 is not defined.",_unitfaction];
+_mis = player createDiaryRecord ["diary", ["Mission","
+<br/>
+*** Insert the mission here. ***
+"]];
+
+// ====================================================================================
+
+// NOTES: SITUATION
+// The code below creates the situation sub-section of notes.
+
+_sit = player createDiaryRecord ["diary", ["Situation","
+<br/>
+*** Insert general information about the situation here.***
+<br/><br/>
+<font size='18'>ENEMY FORCES</font>
+<br/>
+*** Insert information about enemy forces here.***
+<br/><br/>
+<font size='18'>FRIENDLY FORCES</font>
+<br/>
+*** Insert information about friendly forces here.***
+"]];
+
+// ====================================================================================
