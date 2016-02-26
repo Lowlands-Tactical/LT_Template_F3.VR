@@ -414,9 +414,9 @@ switch (_typeofUnit) do
 		_unit addmagazines [_carbinemag,7];
 		_unit addweapon _carbine;
 		_unit addmagazines [_smokegrenade,4];
-		{_unit addItem _firstaid} forEach [1,2,3,4];
+		_unit addItem "ItemAndroid";
+		_unit addItem "ItemTabHCam";
 		["m"] call _backpack;
-		(unitBackpack _unit) addItemCargoGlobal ["ItemTabHCam",1];
 	};
 
 // LOADOUT: FIRE TEAM LEADER
