@@ -23,14 +23,6 @@ if(count _this > 2) then
 
 // ====================================================================================
 
-// INSIGNIA
-// This block will give units insignia on their uniforms.
-[_unit,_typeofUnit] spawn {
-	#include "f_assignInsignia.sqf"
-};
-
-// ====================================================================================
-
 // DECIDE IF THE SCRIPT SHOULD RUN
 // Depending on locality the script decides if it should run
 
@@ -74,52 +66,7 @@ if (f_var_debugMode == 1) then
 // The following block of code executes only if the unit is in a NATO slot; it
 // automatically includes a file which contains the appropriate equipment data.
 
-if (_faction == "nld_units") then {
 #include "f_assignGear_nld.sqf"
-};
-
-
-
-// ====================================================================================
-
-// GEAR: BLUFOR > NATO
-// The following block of code executes only if the unit is in a NATO slot; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "blu_f") then {
-#include "f_assignGear_nato.sqf"
-};
-
-
-// ====================================================================================
-
-// GEAR: OPFOR > CSAT
-// The following block of code executes only if the unit is in a CSAT slot; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction == "opf_f") then {
-	#include "f_assignGear_csat.sqf"
-};
-
-// ====================================================================================
-
-// GEAR: INDEPEDENT > AAF
-// The following block of code executes only if the unit is in a AAF slot; it
-// automatically includes a file which contains the appropriate equipment data.
-
-if(_faction == "ind_f") then {
-	#include "f_assignGear_aaf.sqf";
-};
-
-// ====================================================================================
-
-// GEAR: FIA
-// The following block of code executes only if the unit is in a FIA slot (any faction); it
-// automatically includes a file which contains the appropriate equipment data.
-
-if (_faction in ["blu_g_f","opf_g_f","ind_g_f"]) then {
-	#include "f_assignGear_fia.sqf"
-};
 
 // ====================================================================================
 
