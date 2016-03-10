@@ -100,3 +100,9 @@ player switchMove "AmovPercMstpSrasWrflDnon_AmovPercMstpSlowWrflDnon";
 
 // Start with Earbuds in
 player setVariable ["ACE_hasEarPlugsIn", true, true];
+
+// Fuck chat
+showChat false;
+
+// Extend the range of the radio.
+TF_terrain_interception_coefficient = 0;
