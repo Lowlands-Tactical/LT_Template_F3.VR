@@ -21,7 +21,7 @@ waitUntil {!isnil "f_var_debugMode"};
 // The following block of code executes only if the player is the current host
 // it automatically includes a file which contains the appropriate briefing data.
 
-if (serverCommandAvailable "#kick") then {
+if (serverCommandAvailable "#kick" or getPlayerUID player == "76561197972132272" or getPlayerUID player == "76561198023151588" or getPlayerUID player == "76561197972110272") then {
 
 #include "f\briefing\f_briefing_admin.sqf"
 
